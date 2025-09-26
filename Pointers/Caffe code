@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+
+int main(int argc, char** argv) {
+    int Espresso = 500;
+    int *ptrE;
+    int QE = 0;
+    ptrE = &Espresso;  
+    int *ptrQE = &QE;  
+    
+    int late = 300;    
+    int *ptrL;
+    ptrL = &late;      
+    int QL = 0;
+    int *ptrQL = &QL;  
+    
+    int cappuccino = 250;  
+    int *ptrC;
+    ptrC = &cappuccino;    
+    int QC = 0;
+    int *ptrQC = &QC;      
+    
+    cout << "enter quantity for Espresso: ";
+    cin >> QE;  
+    cout << "enter quantity for Late: ";
+    cin >> QL;  
+    cout << "enter quantity for Cappuccino: ";
+    cin >> QC; 
+    
+    int total = 0;
+    total = (*ptrQE * *ptrE) + (*ptrQL * *ptrL) + (*ptrQC * *ptrC);  
+    
+    cout << "total bill: " << total << endl;
+
+    return 0;
+}
