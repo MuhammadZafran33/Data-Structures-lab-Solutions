@@ -49,5 +49,5 @@ to run these programs on your system:
 
 1. clone the repository:  
    ```bash
-   git clone https://github.com/your-username/Data-Structures-lab-Solutions.git
+   git clone https://github.com/Muhammad Zafran Imsciences-Muhammadzafran33/Data-Structures-lab-Solutions.git
 
