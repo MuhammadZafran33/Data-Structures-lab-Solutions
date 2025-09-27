@@ -24,4 +24,17 @@ this repository reflects my journey of learning and practicing data structures i
 ## 📂 repository structure
 the repository is divided into folders based on lab topics:  
 
-
+Data-Structures-lab-Solutions/
+│
+├── pointers/ # solutions and exercises related to pointers
+│ ├── clean_attendance_register.cpp
+│ ├── custom_score_tracker.cpp
+│ └── secret_code_machine.cpp
+│
+├── arrays/ # (to be added) array-based problems
+│
+├── linked-lists/ # (to be added) linked list problems
+│
+├── stacks-queues/ # (to be added) stack & queue problems
+│
+└── README.md # project documentation
