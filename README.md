@@ -6,7 +6,7 @@ this repo contains solutions, implementations, and notes for **data structures**
 ---
 
 ## 👤 about me
-hi! i am **muhammad zafran**,  
+Hi! I am **Muhammad Zafran**,  
 🎓 a **3rd semester student of artificial intelligence** at **institute of management sciences (im sciences), peshawar**.  
 
 this repository reflects my journey of learning and practicing data structures in c++. it is a mix of lab assignments, personal practice, and extra notes to strengthen my understanding.
