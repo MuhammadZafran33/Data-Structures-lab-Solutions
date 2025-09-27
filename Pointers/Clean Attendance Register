@@ -1,0 +1,54 @@
+#include <iostream>
+
+
+using namespace std;
+
+int main() {
+	
+    int numParticipants;
+
+    cout << "Enter number of Students : ";
+    cin >> numParticipants;
+    
+// we used Calloc method here.........................
+    int *attendance = (int*) calloc(numParticipants, sizeof(int));
+
+    if (attendance == nullptr) {
+        cout << "Memory allocation failed!" << endl;
+        return 1;
+    }
+
+   
+    cout << " All Students are marked absent 0 by default ";
+
+    // here we Take attendence of the present students........
+    int presentCount;
+    cout << "How many Students are present? ";
+    cin >> presentCount;
+
+    for (int i = 0; i < presentCount; i++) {
+        int id;
+        cout << "Enter Student number to mark present (1 to " << numParticipants << "): ";
+        cin >> id;
+
+       
+        if (id >= 1 && id <= numParticipants) {
+            attendance[id - 1] = 1;  
+        } else {
+            cout << "Invalid Student number! Skipping...\n";
+        }
+    }
+
+    
+    cout << "\n   Final Attendance Register   \n"<<endl;
+    for (int i = 0; i < numParticipants; i++) {
+        cout << "Student " << (i + 1) << ": " 
+             << (attendance[i] == 1 ? "Present" : "Absent") << endl;
+    }
+
+    
+    free(attendance);
+    cout<<"      now the memory freed ..."<<endl;
+
+    return 0;
+}
