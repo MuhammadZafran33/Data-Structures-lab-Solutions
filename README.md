@@ -51,6 +51,8 @@ to run these programs on your system:
    ```bash
    git clone https://github.com/Muhammad Zafran IMSCIENCES-Muhammadzafran33/Data-Structures-lab-Solutions.git
 
+---
+---
 
 ## 🧑‍💻 learning outcomes
 
@@ -65,3 +67,56 @@ by solving these problems, i aim to:
 . prepare for algorithms and ai-related subjects
 
 . create a personal reference guide for data structures
+
+
+## 📌 future goals
+
+. add more lab solutions as the semester progresses
+
+. include detailed comments and explanations for every code
+
+. document time complexity of each algorithm
+
+. add diagrams and flowcharts for better understanding
+
+. provide practice exercises at the end of each folder
+
+---
+
+## 🤝 contributions
+
+. this is mainly my personal lab repo, but if you want to contribute:
+
+. fork the repo
+
+. create a new branch with your feature/solution
+
+. commit your changes
+
+. push to your branch
+
+. create a pull request
+
+. all contributions (bug fixes, additional programs, explanations) are welcome!
+
+---
+
+## 🙏 acknowledgments
+
+. special thanks to:
+
+. my teachers at im sciences, peshawar for guidance
+
+. my classmates for discussions and motivation
+
+. the open-source community for providing coding resources
+
+---
+
+## 📜 license
+
+. this repository is only for learning and educational purposes.
+. you are free to use and modify the code for your own practice.
+
+---
+
