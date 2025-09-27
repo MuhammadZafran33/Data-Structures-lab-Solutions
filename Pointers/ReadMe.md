@@ -1,8 +1,8 @@
-Coffee Shop Bill Calculator
+# Coffee Shop Bill Calculator
 Description
 This C++ program calculates the total bill for coffee orders at a coffee shop. It uses pointers to manage prices and quantities for three types of coffee: Espresso, Latte, and Cappuccino.
 
-Features
+## Features
 Calculates total bill based on coffee quantities and prices
 
 Demonstrates pointer usage in C++
@@ -18,7 +18,7 @@ Cappuccino: 250 units
 Using Visual Studio (Windows):
 Compile and run through the IDE or use Developer Command Prompt.
 
-How to Use
+## How to Use
 Run the program
 
 Enter the quantity for Espresso when prompted
@@ -39,7 +39,7 @@ Input: Takes quantity inputs from user
 Calculation: Computes total = (Espresso Qty × Price) + (Latte Qty × Price) + (Cappuccino Qty × Price)
 
 Output: Displays the final total bill
-Learning Objectives
+## Learning Objectives
 This program demonstrates:
 
 Pointer declarations and assignments
@@ -52,7 +52,7 @@ User input handling
 
 Variable memory addressing
 
-Notes
+## Notes
 Prices are fixed in the code
 
 Program uses integer arithmetic for calculations
