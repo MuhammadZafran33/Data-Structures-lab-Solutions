@@ -118,6 +118,57 @@ the program demonstrates how to use **malloc** for dynamic memory allocation in 
 5. memory is freed at the end  
 
 ---
+---
+---
+# PROJECT 04...
+---
+# clean attendance register
+
+this project is a c++ program that simulates an attendance register for a workshop.  
+it shows how to use **calloc** for dynamic memory allocation, where all values start at zero automatically.  
+this makes it perfect for keeping attendance clean: everyone begins as **absent (0)**, and then the program marks selected participants as **present (1)**.  
+
+---
+
+## problem statement
+scenario: "clean attendance register"  
+
+you are designing an attendance register for a workshop. the program should:  
+1. ask the user for the number of participants.  
+2. dynamically allocate memory for their attendance status (1 = present, 0 = absent).  
+3. initially, all participants should be marked absent by default.  
+4. allow the user to mark selected participants as present.  
+5. display the final attendance list at the end.  
+
+hint to students: the attendance must be clean (all zeros) before marking anyone present, so **calloc** is used instead of malloc.  
+
+---
+
+## features
+- asks the user for the total number of participants  
+- uses **calloc** to allocate memory dynamically  
+- calloc ensures all values are initialized to `0` (absent)  
+- user can mark specific participants as `1` (present)  
+- program displays a neat attendance register at the end  
+- memory is freed properly to avoid leaks  
+
+---
+
+## concept explanation
+- **why calloc?**  
+  - `malloc` only allocates memory but does not initialize it.  
+  - `calloc` allocates memory **and** sets all values to `0`.  
+  - since "0 = absent" is required at the start, calloc is the best choice.  
+
+- **attendance logic**  
+  - each participant has an index in the array.  
+  - if the value is `0` → absent.  
+  - if the value is `1` → present.  
+  - the user marks present participants by entering their numbers.  
+
+---
+
+
 
 
 
