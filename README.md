@@ -120,9 +120,9 @@ by solving these problems, i aim to:
 
 ---
 ---
-...
+---
 
-#             ✨ thanks for visiting my repository!
+#             ✨ thanks for visiting my repository! 
 ---
 ---
 ---
