@@ -24,17 +24,30 @@ this repository reflects my journey of learning and practicing data structures i
 ## 📂 repository structure
 the repository is divided into folders based on lab topics:  
 
-Data-Structures-lab-Solutions/
-│
-├── pointers/ # solutions and exercises related to pointers
-│ ├── clean_attendance_register.cpp
-│ ├── custom_score_tracker.cpp
-│ └── secret_code_machine.cpp
-│
-├── arrays/ # (to be added) array-based problems
-│
-├── linked-lists/ # (to be added) linked list problems
-│
-├── stacks-queues/ # (to be added) stack & queue problems
-│
-└── README.md # project documentation
+
+---
+
+## 📖 topics covered
+this repository will eventually cover the following topics:  
+
+- ✅ pointers & dynamic memory allocation (`malloc`, `calloc`, `new`)  
+- ✅ basic c++ programs with arrays  
+- ⏳ linked lists (singly, doubly, circular)  
+- ⏳ stacks and queues  
+- ⏳ searching and sorting algorithms (linear, binary, bubble, quick, merge, etc.)  
+- ⏳ trees (bst, avl)  
+- ⏳ graphs (dfs, bfs, shortest path algorithms)  
+- ⏳ hashing techniques  
+- ⏳ complexity analysis  
+
+*(✅ = completed, ⏳ = in progress, 📌 = upcoming)*  
+
+---
+
+## ⚙️ installation
+to run these programs on your system:  
+
+1. clone the repository:  
+   ```bash
+   git clone https://github.com/your-username/Data-Structures-lab-Solutions.git
+
