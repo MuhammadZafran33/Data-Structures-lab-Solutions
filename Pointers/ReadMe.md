@@ -1,3 +1,5 @@
+# PROJECT 01...
+
 # Coffee Shop Bill Calculator
 Description
 This C++ program calculates the total bill for coffee orders at a coffee shop. It uses pointers to manage prices and quantities for three types of coffee: Espresso, Latte, and Cappuccino.
@@ -58,3 +60,6 @@ Prices are fixed in the code
 Program uses integer arithmetic for calculations
 
 Error handling for invalid input is not implemented in this basic version
+
+
+# PROJECT 02...
