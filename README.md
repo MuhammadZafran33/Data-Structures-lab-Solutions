@@ -51,3 +51,17 @@ to run these programs on your system:
    ```bash
    git clone https://github.com/Muhammad Zafran IMSCIENCES-Muhammadzafran33/Data-Structures-lab-Solutions.git
 
+
+## 🧑‍💻 learning outcomes
+
+by solving these problems, i aim to:
+
+. understand the core principles of data structures
+
+. strengthen problem-solving and logical thinking
+
+. practice dynamic memory allocation in c++
+
+. prepare for algorithms and ai-related subjects
+
+. create a personal reference guide for data structures
