@@ -119,4 +119,10 @@ by solving these problems, i aim to:
 . you are free to use and modify the code for your own practice.
 
 ---
+---
+...
 
+#             ✨ thanks for visiting my repository!
+---
+---
+---
