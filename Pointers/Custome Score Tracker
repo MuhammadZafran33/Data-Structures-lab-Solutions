@@ -1,0 +1,39 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int numPlayers;
+
+    cout << "Enter number of players: ";
+    cin >> numPlayers;
+
+  
+    int *scores = (int*) malloc(numPlayers * sizeof(int));
+
+    if (scores == nullptr) {
+        cout << "Memory allocation failed!" << endl;
+        return 1;
+    }
+
+    
+    cout << " Enter scores for " << numPlayers << " players: ";
+    for (int i = 0; i < numPlayers; i++) {
+        cout << "Player " << (i + 1) << " score: ";
+        
+        cin >> scores[i]; // this will store score in array of players by index ......
+    }
+  
+  
+    cout << "    Tournament Scores   ";
+    for (int i = 0; i < numPlayers; i++) {
+        cout << "Player " << (i + 1) << ": " << scores[i] << endl;
+    }
+
+
+    free(scores); // this free funct release memory .......................
+
+    cout << "  Memory free  successfully   ";
+
+    return 0;
+}
