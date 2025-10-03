@@ -9,3 +9,13 @@ Normal Passengers: Join at the end of the queue
 Emergency Passengers: VIP/medical cases that join at the front
 
 Special Booking Passengers: Join at specific positions in the queue
+
+# 🏗️ Data Structures
+## Node Structure
+-
+struct Node {
+    int data;       // Passenger ID
+    Node* next;     // Pointer to next passenger
+    Node(int d);    // Constructor
+};
+-
