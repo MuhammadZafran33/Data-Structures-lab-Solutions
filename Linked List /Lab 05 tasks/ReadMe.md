@@ -34,5 +34,33 @@ Robust Error Handling: Handles empty queue scenarios gracefully.
 
 User-Friendly Interface: Simple menu-driven console application.
 
+## Example Usage
+Adding Students: Input name and ID, automatically joins queue end
+
+Serving Students: Front student gets T-shirt, removed from queue
+
+Removing Students: Enter ID to remove from any position
+
+Monitoring: Real-time queue display and count updates
+
+Key Components
+Student Structure: Contains name, ID, and next pointer
+
+StudentQueue Class: Implements all queue operations
+
+Main Function: Handles user interface and menu loop
+
+## Main Classes & Methods
+
+addStudent(string name, int id): Add to queue end
+
+serveStudent() : Remove and serve front student
+
+removeStudentById(int id): Remove specific student
+
+displayQueue(): Show all students in order
+
+countStudents(): Return current queue size
+
 
 
