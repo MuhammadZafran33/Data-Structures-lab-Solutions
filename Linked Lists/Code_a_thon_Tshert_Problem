@@ -1,1 +1,190 @@
+#include <iostream>
+using namespace std;
 
+struct Student {
+    int id;
+    string name;
+    Student* next;
+};
+
+class StudentQueue {
+private:
+    Student* front;
+    Student* rear;
+    int count;
+
+public:
+    StudentQueue() {
+        front = nullptr;
+        rear = nullptr;
+        count = 0;
+    }
+
+    void addStudent(string name, int id) {
+        Student* newStudent = new Student();
+        newStudent->id = id;
+        newStudent->name = name;
+        newStudent->next = nullptr;
+
+        if (rear == nullptr) {
+            front = rear = newStudent;
+        } else {
+            rear->next = newStudent;
+            rear = newStudent;
+        }
+        count++;
+        cout << name << " (ID: " << id << ") added to queue.\n";
+    }
+
+    void serveStudent() {
+        if (front == nullptr) {
+            cout << "Queue is empty. No student to serve.\n";
+            return;
+        }
+
+        Student* temp = front;
+        cout << "Serving: " << front->name << " (ID: " << front->id << ")\n";
+        front = front->next;
+
+        if (front == nullptr) {
+            rear = nullptr;
+        }
+
+        delete temp;
+        count--;
+    }
+
+    void removeStudentById(int id) {
+        if (front == nullptr) {
+            cout << "Queue is empty.\n";
+            return;
+        }
+
+        Student* current = front;
+        Student* prev = nullptr;
+
+        // Check if front node needs to be removed
+        if (front->id == id) {
+            cout << "Removing: " << front->name << " (ID: " << front->id << ")\n";
+            front = front->next;
+            if (front == nullptr) rear = nullptr;
+            delete current;
+            count--;
+            return;
+        }
+
+        // Search for student in the middle or end
+        while (current != nullptr && current->id != id) {
+            prev = current;
+            current = current->next;
+        }
+
+        if (current == nullptr) {
+            cout << "Student with ID " << id << " not found in queue.\n";
+            return;
+        }
+
+        cout << "Removing: " << current->name << " (ID: " << current->id << ")\n";
+        prev->next = current->next;
+        
+        // If we're removing the last student
+        if (current == rear) {
+            rear = prev;
+        }
+        
+        delete current;
+        count--;
+    }
+
+    void displayQueue() {
+        if (front == nullptr) {
+            cout << "Queue is empty.\n";
+            return;
+        }
+
+        cout << "Current Queue (Front to Back):\n";
+        Student* current = front;
+        int position = 1;
+        
+        while (current != nullptr) {
+            cout << position << ". " << current->name << " (ID: " << current->id << ")\n";
+            current = current->next;
+            position++;
+        }
+    }
+
+    void countStudents() {
+        cout << "Total students waiting: " << count << "\n";
+    }
+
+    void displayMenu() {
+        cout << "\n============================\n";
+        cout << "T-SHIRT QUEUE MANAGEMENT\n";
+        cout << "============================\n";
+        cout << "1. Add Student\n";
+        cout << "2. Serve Student\n";
+        cout << "3. Remove Student by ID\n";
+        cout << "4. Display Queue\n";
+        cout << "5. Count Students\n";
+        cout << "6. Exit\n";
+        cout << "============================\n";
+        cout << "Enter your choice (1-6): ";
+    }
+};
+
+int main() {
+    StudentQueue queue;
+    int choice, studentId;
+    string name;
+
+    do {
+        queue.displayMenu();
+        cin >> choice;
+
+        switch (choice) {
+            case 1:
+                cout << "Enter student name: ";
+                cin.ignore();
+                getline(cin, name);
+                cout << "Enter student ID: ";
+                cin >> studentId;
+                queue.addStudent(name, studentId);
+                break;
+
+            case 2:
+                queue.serveStudent();
+                break;
+
+            case 3:
+                cout << "Enter student ID to remove: ";
+                cin >> studentId;
+                queue.removeStudentById(studentId);
+                break;
+
+            case 4:
+                queue.displayQueue();
+                break;
+
+            case 5:
+                queue.countStudents();
+                break;
+
+            case 6:
+                cout << "Thank you for using the system!\n";
+                break;
+
+            default:
+                cout << "Invalid choice! Please try again.\n";
+                break;
+        }
+
+        if (choice != 6) {
+            cout << "\nPress Enter to continue...";
+            cin.ignore();
+            cin.get();
+        }
+
+    } while (choice != 6);
+
+    return 0;
+}
