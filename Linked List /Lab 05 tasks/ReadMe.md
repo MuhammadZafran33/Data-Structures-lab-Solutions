@@ -26,14 +26,13 @@ Display Queue: View all students in order from front to back
 Count Students: Get real-time count of waiting students
 
 ## 🔧 Technical Features
-Dynamic Memory Management: No fixed size limitations
+Dynamic Memory Management: No fixed size limitations.
 
-Efficient Operations: O(1) for add/serve, O(n) for removal
+Efficient Operations: O(1) for add/serve, O(n) for removal.
 
-Robust Error Handling: Handles empty queue scenarios gracefully
+Robust Error Handling: Handles empty queue scenarios gracefully.
 
-User-Friendly Interface: Simple menu-driven console application
-
+User-Friendly Interface: Simple menu-driven console application.
 
 
 
