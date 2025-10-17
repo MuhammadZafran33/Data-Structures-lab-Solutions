@@ -79,7 +79,8 @@ A robust C++ implementation of a **doubly linked list** specifically designed to
 ## 📊 Sample Execution
 
 ---
-<img width="856" height="235" alt="image" src="https://github.com/user-attachments/assets/e8a2b81e-1a05-4843-bf94-fd8422149b4d" />
+<img width="859" height="277" alt="image" src="https://github.com/user-attachments/assets/4a01bc83-8c06-41e4-a706-569f6321c47a" />
+
 
 ### Explanation
 **> Forward:** Shows IPs in reverse order of file reading (LIFO - Last In First Out)
