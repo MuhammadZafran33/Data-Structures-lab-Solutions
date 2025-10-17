@@ -140,13 +140,13 @@ A robust C++ implementation of a **doubly linked list** specifically designed to
 ## 🤝 Contributing
 **-> This project serves as an excellent foundation for learning data structures. Feel free to:**
 
-< Add new features
+< Add new features />
 
 > Improve error handling
 
 > Optimize performance
 
-> Enhance documentation>
+> Enhance documentation
 
 ## 📄 License
 Open for educational and learning purposes. Perfect for computer science students and programming enthusiasts.
