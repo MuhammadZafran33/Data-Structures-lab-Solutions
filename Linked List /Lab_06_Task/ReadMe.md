@@ -1,11 +1,15 @@
 # 🔗 IP Address Doubly Linked List Manager
+
 ## 📖 Overview
 A robust C++ implementation of a **doubly linked list** specifically designed to handle IP address management. This program efficiently reads IP addresses from a file and organizes them in a bidirectional linked list structure, allowing seamless traversal in both forward and reverse directions.
 
+---
 ## 🎯 Problem Statement
 **Challenge:** How to efficiently store and manage a collection of IP addresses while maintaining the ability to traverse them in both chronological and reverse order?
 
 **Solution:** Implement a doubly linked list where each node contains an IP address and pointers to both previous and next nodes, creating a flexible data structure that supports bidirectional traversal.
+
+---
 
 # 🏗️ Architecture
 ## Core Components
@@ -82,6 +86,8 @@ A robust C++ implementation of a **doubly linked list** specifically designed to
 
 **> Backward:** Shows IPs in exact order they appeared in file (FIFO - First In First Out)
 
+---
+
 ## 🎯 Learning Outcomes
 ### Computer Science Concepts
 **->Data Structures:** Doubly Linked List implementation
@@ -140,7 +146,7 @@ A robust C++ implementation of a **doubly linked list** specifically designed to
 ## 🤝 Contributing
 **-> This project serves as an excellent foundation for learning data structures. Feel free to:**
 
-< Add new features />
+> Add new features 
 
 > Improve error handling
 
@@ -153,5 +159,6 @@ Open for educational and learning purposes. Perfect for computer science student
 
 **⭐ Star this repository if you found it helpful for understanding doubly linked lists and file handling in C++!**
 
+---
 
 
