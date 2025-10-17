@@ -72,6 +72,15 @@ class DoublyLL{
 		}
 		cout<<endl;
 	}
+void freeList() {
+    Node* current = head;
+    while (current != nullptr) {
+        Node* nodeToDelete = current; 
+        current = current->next;      
+        delete nodeToDelete;          
+    }
+    cout << "\nMemory freed successfully! ✨" << endl;
+}
 };
 
 int main(int argc, char** argv) {
@@ -105,4 +114,5 @@ int main(int argc, char** argv) {
 	ll.displayBack();
 	
 	return 0;
+
 };
