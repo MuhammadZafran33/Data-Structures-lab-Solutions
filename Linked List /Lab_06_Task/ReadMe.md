@@ -52,4 +52,27 @@ A robust C++ implementation of a **doubly linked list** specifically designed to
 
 **. Backward Traversal: Starts from tail, follows previous pointers**
 
+# 💡 Technical Features
+## 🛡️ Error Handling
+. File existence validation
+
+. Empty list detection
+
+. Memory allocation safety
+
+## 🔄 Bidirectional Navigation
+**. Forward Display:** Head to Tail (reverse insertion order)
+
+**. Backward Display:** Tail to Head (original file order)
+
+## 💾 Memory Efficiency
+. Dynamic memory allocation
+
+. Proper node linking
+
+. No memory leaks
+
+## 📊 Sample Execution
+
+---
 
