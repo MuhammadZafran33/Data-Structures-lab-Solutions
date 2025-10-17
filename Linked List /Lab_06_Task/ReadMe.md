@@ -10,12 +10,46 @@ A robust C++ implementation of a **doubly linked list** specifically designed to
 # 🏗️ Architecture
 ## Core Components
 ### 1. Node Class 🧩
-<img width="116" height="141" alt="image" src="https://github.com/user-attachments/assets/60be3e92-e4d6-452e-9854-57ba266f8e69" />
+<img width="587" height="82" alt="image" src="https://github.com/user-attachments/assets/886ad676-c5c3-41b0-921d-d22dd7f73ed6" />
+
+
 **Each node acts as a container holding:**
 
-. An IP address (as string)
-
+**. An IP address (as string)
 . Reference to the previous node in sequence
+. Reference to the next node in sequence**
 
-. Reference to the next node in sequence
+### 2. Doubly Linked List Class �
+<img width="292" height="53" alt="image" src="https://github.com/user-attachments/assets/2af8f499-9330-4484-a2b7-560672b521a9" />
+
+**. Manages the entire chain of nodes with capabilities to:**
+
+**. Insert new IP addresses at the beginning
+ . Display all IPs from start to end
+. Display all IPs from end to start**
+
+# 🎮 How It Works
+## Data Flow Process
+### File Reading Phase 📖
+
+. Program opens ips.txt
+
+. Reads entire line of comma-separated IP addresses
+
+. Safely closes the file after reading
+
+### Data Processing Phase ⚙️
+
+. Splits the input string into individual IP addresses
+
+. Creates new nodes for each IP
+
+. Inserts nodes at the beginning of the linked list
+
+### Display Phase 🖥️
+
+**. Forward Traversal: Starts from head, follows next pointers**
+
+**. Backward Traversal: Starts from tail, follows previous pointers**
+
 
