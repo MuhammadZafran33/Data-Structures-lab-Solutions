@@ -233,3 +233,30 @@ graph LR
 **Invalid Positions:** Position validation with meaningful error messages
 
 **Boundary Conditions:** Proper handling of first/last node operations
+
+---
+## Complexity Analysis
+### Time Complexity:
+
+#### Add to front/end: O(1)
+
+#### Insert at position: O(n)
+
+#### Treat patient: O(1)
+
+#### Display: O(n)
+
+#### Space Complexity: O(n) where n is number of patients
+
+## Advantages
+**Efficient Prioritization:** Critical patients handled immediately
+
+**Flexible Insertions:** Patients can be inserted at any position
+
+**Bidirectional Navigation:** Easy traversal in both directions
+
+**Dynamic Sizing:** No fixed size limitations
+
+**Memory Efficient:** Only allocates memory for actual patients
+
+This system provides an efficient and flexible solution for managing emergency room patient queues with proper prioritization and comprehensive queue management capabilities.
