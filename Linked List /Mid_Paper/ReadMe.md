@@ -77,22 +77,22 @@ sequenceDiagram
     Q->>D: Return Patient Data
     D->>P: Provide Treatment
 ```
-📋 Table of Contents
-🌟 Overview
+### ⇒ 📋 Table of Contents
+### ⇒ 🌟 Overview
 
-🚀 Features
+### ⇒ 🚀 Features
 
-🏗️ System Architecture
+### ⇒ 🏗️ System Architecture
 
-💻 Code Implementation
+### ⇒ 💻 Code Implementation
 
-🎯 Usage Examples
+### ⇒ 🎯 Usage Examples
 
-📊 Performance Analysis
+### ⇒ 📊 Performance Analysis
 
-🔧 Installation & Setup
-🌟 Overview
-# Overview
+### ⇒ 🔧 Installation & Setup
+
+# ⇒🌟 Overview
 
  ```mermaid
 graph LR
@@ -119,51 +119,63 @@ The Hospital Emergency Room Queue System is a C++ implementation of a doubly-lin
 **. Bidirectional Traversal:** View the queue in both forward and reverse directions
 
 **. Real-time Queue Status:** Monitor current queue state and endpoints
-## 🎯 Core Capabilities
-### Feature	Icon	 Description
-Critical Care	⚡	Urgent patients jump to front of queue
-Normal Processing	📝	Regular patients join at the end
-Flexible Insertion	📍	Insert patients at any position
-Efficient Treatment	🏥	Process patients from the front
-Bidirectional View	🔄	Traverse queue in both directions
+### 🛠️ Advanced Functionality
+#### ■ 🎪 Real-time Queue Visualization
+
+#### ■ 📱 Dynamic Memory Management
+
+#### ■ 🛡️ Comprehensive Error Handling
+
+#### ■ 📈 Performance Optimization
+
+#### ■ 🎨 Interactive Status Display
 
 # Data Structure
+
+## ■ Doubly Linked List: Each patient node contains:
 ```mermaid
 graph TB
-    A[First Patient] --> B[Patient 150]
-    B --> C[Patient 101]
-    C --> D[Last Patient 102]
+    subgraph DataStructure [Doubly-Linked List Structure]
+        direction LR
+        Q[EmergencyQueue] --> F[firstPatient]
+        Q --> L[lastPatient]
+        
+        F --> P1[Patient 150]
+        P1 --> P2[Patient 101]
+        P2 --> P3[Patient 102]
+        P3 --> P4[Patient 300]
+        P4 --> NULL[null]
+        
+        NULL2[null] --> P1
+        P2 --> P1
+        P3 --> P2
+        P4 --> P3
+        L --> P4
+    end
     
-    D -.-> C
-    C -.-> B
-    B -.-> A
+    subgraph Operations[Supported Operations]
+        O1[⚡ addCriticalPatient]
+        O2[📝 addNormalPatient]
+        O3[📍 addPatientAtPosition]
+        O4[🏥 treatFirstPatient]
+        O5[👀 showQueue]
+        O6[🔄 showQueueReverse]
+    end
+    
+    Operations --> DataStructure
+    
+    style DataStructure fill:#f5f5f5
+    style Operations fill:#e3f2fd
+    style P1 fill:#e1f5fe
+    style P2 fill:#f3e5f5
+    style P3 fill:#e8f5e8
+    style P4 fill:#fff3e0
 ```
-**> Doubly Linked List:** Each patient node contains:
-
 ■ Patient ID (integer)
 
 ■ Pointer to previous patient
 
 ■ Pointer to next patient
-
-```mermaid
-graph TB
-    A[🚗 Patient Arrives] --> B{🔍 Condition Check}
-    B -->|⚡ Critical| C[Front of Queue]
-    B -->|📋 Normal| D[End of Queue]
-    C --> E[🏥 Queue Management]
-    D --> E
-    E --> F[💊 Treatment]
-    F --> G[✅ Discharge]
-    
-    style A fill:#e1f5fe
-    style B fill:#fff3e0
-    style C fill:#ffebee
-    style D fill:#e8f5e8
-    style E fill:#f3e5f5
-    style F fill:#e0f2f1
-    style G fill:#e8f5e8
-```
 
 # Class Structure
 ## EmergencyQueue Class
@@ -188,15 +200,6 @@ graph TB
 
 **※ addPatientAtPosition(int patientID, int position):** Inserts at specific position
 
-```mermaid
-flowchart TD
-    Start[Add Patient] --> Check{Critical?}
-    Check -->|Yes| AddFront[Add to Front]
-    Check -->|No| AddEnd[Add to End]
-    AddFront --> Update[Update Pointers]
-    AddEnd --> Update
-    Update --> End[Done]
-```
 
 ### Patient Treatment
 
@@ -215,18 +218,50 @@ flowchart TD
 **✓ getFirstPatient():** Returns ID of first patient (-1 if empty)
 
 **✓ getLastPatient():** Returns ID of last patient (-1 if empty)
+# Empty Queue State
+```mermaid
+flowchart LR
+    subgraph EmergencyQueue
+        F[firstPatient] --> NULL1[null]
+        L[lastPatient] --> NULL2[null]
+    end
+```
+# Single Patient in Queue
 
 ```mermaid
-graph LR
-    A[🚑 Arrival] --> B{🔍 Triage}
-    B -->|⚡ Critical| C[💨 Front Queue]
-    B -->|📋 Normal| D[⏳ End Queue]
+flowchart LR
+    subgraph EmergencyQueue
+        F[firstPatient] --> P1[Patient 101]
+        L[lastPatient] --> P1
+    end
     
-    style A fill:#e3f2fd
-    style B fill:#fff8e1
-    style C fill:#ffebee
-    style D fill:#e8f5e8
+    P1[Patient 101] --> NULL1[null]
+    NULL2[null] --> P1
 ```
+# Multiple Patients in Queue (Your Final State)
+```mermaid
+flowchart LR
+    subgraph EmergencyQueue
+        F[firstPatient] --> P1[Patient 150]
+        L[lastPatient] --> P4[Patient 300]
+    end
+    
+    P1[Patient 150] --> P2[Patient 101]
+    P2[Patient 101] --> P3[Patient 102]
+    P3[Patient 102] --> P4[Patient 300]
+    P4 --> NULL1[null]
+    
+    NULL2[null] --> P1
+    P2 --> P1
+    P3 --> P2
+    P4 --> P3
+    
+    style P1 fill:#e1f5fe
+    style P2 fill:#f3e5f5
+    style P3 fill:#e8f5e8
+    style P4 fill:#fff3e0
+```
+
 # Memory Management
 **Automatic Cleanup:** Destructor ensures all patient nodes are properly deleted
 
@@ -240,7 +275,60 @@ graph LR
 **Invalid Positions:** Position validation with meaningful error messages
 
 **Boundary Conditions:** Proper handling of first/last node operations
+```mermaid
+flowchart TB
+    subgraph MemoryLayout
+        Q[EmergencyQueue Object]
+        Q --> F[firstPatient: 0x1000]
+        Q --> L[lastPatient: 0x1003]
+        
+        subgraph PatientNodes
+            P1[0x1000: Patient 150<br/>prev: null<br/>next: 0x1001]
+            P2[0x1001: Patient 101<br/>prev: 0x1000<br/>next: 0x1002]
+            P3[0x1002: Patient 102<br/>prev: 0x1001<br/>next: 0x1003]
+            P4[0x1003: Patient 300<br/>prev: 0x1002<br/>next: null]
+        end
+    end
+    
+    F --> P1
+    L --> P4
+    P1 --> P2
+    P2 --> P3
+    P3 --> P4
+```
+# Adding Critical Patient
+```mermaid
+sequenceDiagram
+    participant User
+    participant Queue as EmergencyQueue
+    participant New as New Patient
+    participant First as First Patient
+    
+    User->>Queue: addCriticalPatient(200)
+    Queue->>New: Create Patient(200)
+    Queue->>First: Get firstPatient
+    New->>First: Set next = firstPatient
+    First->>New: Set previous = newPatient
+    Queue->>Queue: firstPatient = newPatient
+    Queue-->>User: Critical patient 200 added to front
+```
+# Adding Normal Patient
 
+```mermaid
+sequenceDiagram
+    participant User
+    participant Queue as EmergencyQueue
+    participant New as New Patient
+    participant Last as Last Patient
+    
+    User->>Queue: addNormalPatient(300)
+    Queue->>New: Create Patient(300)
+    Queue->>Last: Get lastPatient
+    Last->>New: Set next = newPatient
+    New->>Last: Set previous = lastPatient
+    Queue->>Queue: lastPatient = newPatient
+    Queue-->>User: Patient 300 added to end
+```
 ---
 ## Complexity Analysis
 ### Time Complexity:
@@ -254,6 +342,12 @@ graph LR
 #### Display: O(n)
 
 #### Space Complexity: O(n) where n is number of patients
+### 💾 Space Complexity
+#### ※ Overall: 🅾️(n) where n is number of patients
+
+#### ※ Per Patient: Constant space for node structure
+
+#### ※ Memory Efficiency: Dynamic allocation optimizes resource usage
 
 ## Advantages
 **Efficient Prioritization:** Critical patients handled immediately
@@ -267,3 +361,15 @@ graph LR
 **Memory Efficient:** Only allocates memory for actual patients
 
 This system provides an efficient and flexible solution for managing emergency room patient queues with proper prioritization and comprehensive queue management capabilities.
+
+<div align="center">
+
+    
+    🎉 Ready to Revolutionize Emergency Care!
+Streamline your hospital's patient flow with this intelligent queue management system
+
+Built with ❤️ for better healthcare experiences
+
+⭐ Star this project if you found it helpful!
+
+</div>
