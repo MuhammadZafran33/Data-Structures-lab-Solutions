@@ -100,6 +100,16 @@ graph TB
 
 **※ ~EmergencyQueue():** Cleans up all allocated memory
 
+```mermaid
+flowchart TD
+    Start[Add Patient] --> Check{Critical?}
+    Check -->|Yes| AddFront[Add to Front]
+    Check -->|No| AddEnd[Add to End]
+    AddFront --> Update[Update Pointers]
+    AddEnd --> Update
+    Update --> End[Done]
+```
+
 ### Patient Addition Methods
 
 **※ addCriticalPatient(int patientID):** Adds patient to front
