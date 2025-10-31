@@ -136,5 +136,18 @@ flowchart TD
 **✓ getFirstPatient():** Returns ID of first patient (-1 if empty)
 
 **✓ getLastPatient():** Returns ID of last patient (-1 if empty)
-
-
+''' mermaid
+flowchart LR
+    subgraph EmergencyQueue
+        direction LR
+        first[firstPatient] --> id1[200]
+        id1 --> id2[150]
+        id2 --> id3[101]
+        id3 --> last[lastPatient]
+        
+        last --> id3
+        id3 --> id2
+        id2 --> id1
+        id1 --> first
+    end
+'''
