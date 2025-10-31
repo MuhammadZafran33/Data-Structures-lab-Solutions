@@ -58,6 +58,25 @@ The Hospital Emergency Room Queue System is a C++ implementation of a doubly-lin
 
 ■ Pointer to next patient
 
+```mermaid
+graph TB
+    A[🚗 Patient Arrives] --> B{🔍 Condition Check}
+    B -->|⚡ Critical| C[Front of Queue]
+    B -->|📋 Normal| D[End of Queue]
+    C --> E[🏥 Queue Management]
+    D --> E
+    E --> F[💊 Treatment]
+    F --> G[✅ Discharge]
+    
+    style A fill:#e1f5fe
+    style B fill:#fff3e0
+    style C fill:#ffebee
+    style D fill:#e8f5e8
+    style E fill:#f3e5f5
+    style F fill:#e0f2f1
+    style G fill:#e8f5e8
+```
+
 # Class Structure
 ## EmergencyQueue Class
 ■ Private Members
