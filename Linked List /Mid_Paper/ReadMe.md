@@ -220,4 +220,16 @@ graph LR
     style C fill:#ffebee
     style D fill:#e8f5e8
 ```
+# Memory Management
+**Automatic Cleanup:** Destructor ensures all patient nodes are properly deleted
 
+**No Memory Leaks:** Every new operation has corresponding delete
+
+**Safe Pointer Handling:** Null checks prevent segmentation faults
+
+# Error Handling
+**Empty Queue:** Methods handle empty queue scenarios gracefully
+
+**Invalid Positions:** Position validation with meaningful error messages
+
+**Boundary Conditions:** Proper handling of first/last node operations
