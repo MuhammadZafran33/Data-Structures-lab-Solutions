@@ -5,6 +5,78 @@
 A sophisticated doubly-linked list implementation for managing patient queues in hospital emergency rooms with intelligent prioritization
 
 </div>
+# 🏥 Hospital Emergency Queue System
+
+<div align="center">
+
+## System Overview
+
+```mermaid
+flowchart TD
+    P[Patient Arrival] --> T{Triage}
+    T -->|Critical| C[⚡ Add to Front]
+    T -->|Normal| N[📝 Add to End]
+    
+    C --> Q[Queue Management]
+    N --> Q
+    
+    Q --> F[First Patient]
+    F --> Tr[Treatment]
+    Tr --> D[Discharge]
+    
+    style P fill:#bbdefb
+    style T fill:#ffecb3
+    style C fill:#ffcdd2
+    style N fill:#c8e6c9
+    style Q fill:#e1bee7
+    style Tr fill:#b2ebf2
+    style D fill:#dcedc8
+```
+
+</div>
+
+## Architecture
+
+```mermaid
+classDiagram
+    class Patient {
+        +int id
+        +Patient* previous
+        +Patient* next
+        +Patient(int patientID)
+    }
+    
+    class EmergencyQueue {
+        -Patient* firstPatient
+        -Patient* lastPatient
+        +addCriticalPatient(int id)
+        +addNormalPatient(int id)
+        +treatFirstPatient()
+        +showQueue()
+    }
+    
+    EmergencyQueue --> Patient : manages
+```
+
+## 🔄 Workflow
+
+```mermaid
+sequenceDiagram
+    participant P as Patient
+    participant Q as Queue System
+    participant D as Doctor
+    
+    P->>Q: Arrive at Emergency
+    Q->>Q: Check Condition
+    alt Critical Condition
+        Q->>Q: Add to Front
+    else Normal Condition
+        Q->>Q: Add to End
+    end
+    D->>Q: Treat Next Patient
+    Q->>D: Return Patient Data
+    D->>P: Provide Treatment
+```
 📋 Table of Contents
 🌟 Overview
 
@@ -136,18 +208,16 @@ flowchart TD
 **✓ getFirstPatient():** Returns ID of first patient (-1 if empty)
 
 **✓ getLastPatient():** Returns ID of last patient (-1 if empty)
-''' mermaid
-flowchart LR
-    subgraph EmergencyQueue
-        direction LR
-        first[firstPatient] --> id1[200]
-        id1 --> id2[150]
-        id2 --> id3[101]
-        id3 --> last[lastPatient]
-        
-        last --> id3
-        id3 --> id2
-        id2 --> id1
-        id1 --> first
-    end
-'''
+
+```mermaid
+graph LR
+    A[🚑 Arrival] --> B{🔍 Triage}
+    B -->|⚡ Critical| C[💨 Front Queue]
+    B -->|📋 Normal| D[⏳ End Queue]
+    
+    style A fill:#e3f2fd
+    style B fill:#fff8e1
+    style C fill:#ffebee
+    style D fill:#e8f5e8
+```
+
