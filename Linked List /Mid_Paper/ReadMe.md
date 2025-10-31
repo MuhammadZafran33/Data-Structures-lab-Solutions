@@ -49,7 +49,16 @@ The Hospital Emergency Room Queue System is a C++ implementation of a doubly-lin
 **. Real-time Queue Status:** Monitor current queue state and endpoints
 
 # Data Structure
-
+```mermaid
+graph TB
+    A[First Patient] --> B[Patient 150]
+    B --> C[Patient 101]
+    C --> D[Last Patient 102]
+    
+    D -.-> C
+    C -.-> B
+    B -.-> A
+```
 **> Doubly Linked List:** Each patient node contains:
 
 ■ Patient ID (integer)
