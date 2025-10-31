@@ -119,6 +119,13 @@ The Hospital Emergency Room Queue System is a C++ implementation of a doubly-lin
 **. Bidirectional Traversal:** View the queue in both forward and reverse directions
 
 **. Real-time Queue Status:** Monitor current queue state and endpoints
+## 🎯 Core Capabilities
+### Feature	Icon	 Description
+Critical Care	⚡	Urgent patients jump to front of queue
+Normal Processing	📝	Regular patients join at the end
+Flexible Insertion	📍	Insert patients at any position
+Efficient Treatment	🏥	Process patients from the front
+Bidirectional View	🔄	Traverse queue in both directions
 
 # Data Structure
 ```mermaid
