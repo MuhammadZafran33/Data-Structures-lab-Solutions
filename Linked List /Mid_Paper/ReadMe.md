@@ -1,9 +1,6 @@
 # 🏥 Hospital Emergency Room Queue System
 <div align="center">
-https://img.shields.io/badge/C++-17-blue.svg
-https://img.shields.io/badge/Data-Structures-orange.svg
-https://img.shields.io/badge/License-MIT-green.svg
-https://img.shields.io/badge/Version-1.0.0-brightgreen.svg
+
 
 A sophisticated doubly-linked list implementation for managing patient queues in hospital emergency rooms with intelligent prioritization
 
@@ -23,8 +20,16 @@ A sophisticated doubly-linked list implementation for managing patient queues in
 
 🔧 Installation & Setup
 🌟 Overview
-<div align="center">
 ## Overview
+<div align="center">
+  graph LR
+    A[Patient Arrival] --> B{Critical Condition?}
+    B -->|Yes| C[Add to Front]
+    B -->|No| D[Add to End]
+    C --> E[Queue Management]
+    D --> E
+    E --> F[Treatment]
+  </div>
 The Hospital Emergency Room Queue System is a C++ implementation of a doubly-linked list designed to manage patient queues in a hospital emergency room. This system prioritizes critical patients by adding them to the front of the queue while maintaining efficient operations for normal patient additions and treatments.
 
 ## Features
