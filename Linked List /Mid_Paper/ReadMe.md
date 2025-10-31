@@ -22,13 +22,15 @@ A sophisticated doubly-linked list implementation for managing patient queues in
 🌟 Overview
 ## Overview
 <div align="center">
-  graph LR
+ ```mermaid
+graph LR
     A[Patient Arrival] --> B{Critical Condition?}
     B -->|Yes| C[Add to Front]
     B -->|No| D[Add to End]
     C --> E[Queue Management]
     D --> E
     E --> F[Treatment]
+```
   </div>
 The Hospital Emergency Room Queue System is a C++ implementation of a doubly-linked list designed to manage patient queues in a hospital emergency room. This system prioritizes critical patients by adding them to the front of the queue while maintaining efficient operations for normal patient additions and treatments.
 
@@ -95,3 +97,5 @@ The Hospital Emergency Room Queue System is a C++ implementation of a doubly-lin
 **✓ getFirstPatient():** Returns ID of first patient (-1 if empty)
 
 **✓ getLastPatient():** Returns ID of last patient (-1 if empty)
+
+
