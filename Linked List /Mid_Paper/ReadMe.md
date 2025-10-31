@@ -5,7 +5,6 @@
 A sophisticated doubly-linked list implementation for managing patient queues in hospital emergency rooms with intelligent prioritization
 
 </div>
-# 🏥 Hospital Emergency Queue System
 
 <div align="center">
 
