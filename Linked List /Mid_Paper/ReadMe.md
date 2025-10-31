@@ -26,4 +26,42 @@ The Hospital Emergency Room Queue System is a C++ implementation of a doubly-lin
 
 ■ Pointer to next patient
 
-## Class Structure
+# Class Structure
+## EmergencyQueue Class
+■ Private Members
+**■ firstPatient:** Pointer to the first patient in queue
+
+**■ lastPatient:** Pointer to the last patient in queue
+
+### Public Methods
+**※ Constructor & Destructor**
+
+**※ EmergencyQueue():** Initializes empty queue
+
+**※ ~EmergencyQueue():** Cleans up all allocated memory
+
+### Patient Addition Methods
+
+**※ addCriticalPatient(int patientID):** Adds patient to front
+
+**※ addNormalPatient(int patientID):** Adds patient to end
+
+**※ addPatientAtPosition(int patientID, int position):** Inserts at specific position
+
+### Patient Treatment
+
+**✓ treatFirstPatient():** Removes and treats the first patient
+
+### Queue Display Methods
+
+**✓ showQueue():** Displays queue from first to last
+
+**✓ showQueueReverse():** Displays queue from last to first
+
+**✓ showQueueStatus():** Shows complete queue status with first/last patient info
+
+### Utility Methods
+
+**✓ getFirstPatient():** Returns ID of first patient (-1 if empty)
+
+**✓ getLastPatient():** Returns ID of last patient (-1 if empty)
