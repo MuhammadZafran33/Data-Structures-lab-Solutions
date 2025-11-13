@@ -33,6 +33,7 @@ flowchart TD
 ```
 
 </div>
+---
 
 ## Architecture
 
@@ -56,6 +57,7 @@ classDiagram
     
     EmergencyQueue --> Patient : manages
 ```
+---
 
 ## 🔄 Workflow
 
