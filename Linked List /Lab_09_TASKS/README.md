@@ -4,17 +4,11 @@
 
 A clean, efficient, dynamically resizing Circular Queue implementation in C++.
 Supports:
-
 Enqueue
-
 Dequeue
-
 Front
-
 Dynamic Resizing
-
 Circular Indexing
-
 Print
 
 # 📌 Features
@@ -46,6 +40,8 @@ classDiagram
     }
 ```
 
+---
+
 # 🌀 Circular Queue Visualization
 ## Circular Memory Movement
 
@@ -66,6 +62,8 @@ graph LR
 
 
 ```
+---
+
 # 🚀 Resize Operation (Capacity Doubles)
 ## Before Resize (Capacity = 4)
 ```mermaid
@@ -73,14 +71,72 @@ graph LR
     A[10] --> B[20] --> C[30] --> D[40] --> E[ ] --> F[ ] --> G[ ] --> H[ ]
 
 ```
-# Queue Enqueue Flowchart
+---
 
-```mermaid
-flowchart TD
-    A[enqueue(value)] --> B{Queue Full?}
-    B -- Yes --> C[resize()]
-    B -- No --> D[Insert at rearidx]
-    D --> E[rearidx = (rearidx + 1) % capacity]
-    E --> F[currentSize++]
-    F --> G[Done]
-```
+# 🧠 Core Concepts Explained
+## 1️⃣ Circular Indexing
+
+To avoid shifting elements during dequeue:
+
+(frontidx + i) % capacity
+
+
+### Benefits:
+
+O(1) dequeue
+
+No shifting
+
+Efficient memory usage
+
+## 2️⃣ Dynamic Resizing
+
+### When queue is full:
+
+Capacity doubles
+
+Elements are copied in correct order
+
+New array replaces old
+
+frontidx = 0
+
+rearidx = currentSize
+
+This makes the queue scalable.
+
+## 3️⃣ Memory Management
+
+Uses new[] to allocate
+
+Uses delete[] in destructor
+
+Prevents memory leaks
+
+---
+
+# 🏁 Conclusion
+
+This project demonstrates:
+
+Circular queue logic
+
+Dynamic memory handling
+
+Efficient enqueue/dequeue operations
+
+Proper modular arithmetic
+
+Clean C++ class design
+
+If you want, I can add:
+
+✅ UML Sequence Diagram
+✅ Animated Flowchart
+✅ More test cases
+✅ Separate .h and .cpp files
+✅ Better styling for GitHub
+
+Just tell me!
+---
+---
