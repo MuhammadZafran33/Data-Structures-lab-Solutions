@@ -72,6 +72,28 @@ graph LR
 
 ```
 ---
+# 🔄 Enqueue Flowchart (GitHub-Compatible Mermaid)
+```mermaid
+flowchart TD
+    A[enqueue value] --> B{Is Queue Full?}
+    B -- Yes --> C[Call resize]
+    B -- No --> D[Insert value at rearidx]
+    C --> D
+    D --> E[rearidx = rearidx + 1 % capacity]
+    E --> F[currentSize = currentSize + 1]
+    F --> G[Done]
+```
+
+# 🔁 Dequeue Flowchart
+```mermaid
+flowchart TD
+    A[dequeue] --> B{Is Queue Empty?}
+    B -- Yes --> C[Print Underflow]
+    B -- No --> D[frontidx = frontidx + 1 % capacity]
+    D --> E[currentSize = currentSize - 1]
+    E --> F[Done]
+```
+---
 
 # 🧠 Core Concepts Explained
 ## 1️⃣ Circular Indexing
@@ -140,3 +162,5 @@ If you want, I can add:
 Just tell me!
 ---
 ---
+
+
