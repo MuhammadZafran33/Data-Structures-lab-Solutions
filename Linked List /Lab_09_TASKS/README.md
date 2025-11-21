@@ -136,30 +136,25 @@ Uses delete[] in destructor
 Prevents memory leaks
 
 ---
+# 🔧 Key Features Implemented:
+### ✅ Dynamic Resizing: Automatically doubles capacity when full
+### ✅ Circular Indexing: Efficient O(1) operations using modulo arithmetic
+### ✅ Memory Safety: Proper allocation/deallocation with copy constructor and assignment operator
+### ✅ Error Handling: Underflow detection and exception safety
+### ✅ Debug Visualization: Internal array state inspection
+### ✅ RAII Principle: Resource management in constructor/destructor.
+---
 
 # 🏁 Conclusion
 
 This project demonstrates:
-
 Circular queue logic
-
 Dynamic memory handling
-
 Efficient enqueue/dequeue operations
-
 Proper modular arithmetic
-
 Clean C++ class design
 
-If you want, I can add:
 
-✅ UML Sequence Diagram
-✅ Animated Flowchart
-✅ More test cases
-✅ Separate .h and .cpp files
-✅ Better styling for GitHub
-
-Just tell me!
 ---
 ---
 
