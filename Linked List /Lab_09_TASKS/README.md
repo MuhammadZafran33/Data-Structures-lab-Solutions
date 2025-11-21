@@ -12,10 +12,10 @@ Circular Indexing
 Print
 ```mermaid
 graph TD
-    A[🎯 Dynamic Circular Queue] --> B[⚡ O(1) Operations]
-    A --> C[🔄 Automatic Resizing]
-    A --> D[🌀 Circular Indexing]
-    A --> E[🛡️ Memory Safe]
+    A[Dynamic Circular Queue] --> B[O1 Operations]
+    A --> C[Automatic Resizing]
+    A --> D[Circular Indexing]
+    A --> E[Memory Safe]
     
     B --> B1[Enqueue/Dequeue]
     C --> C1[Double Capacity]
@@ -27,10 +27,6 @@ graph TD
     style C fill:#45b7d1,stroke:#333,stroke-width:2px,color:#000
     style D fill:#96ceb4,stroke:#333,stroke-width:2px,color:#000
     style E fill:#feca57,stroke:#333,stroke-width:2px,color:#000
-    style B1 fill:#e8f4f8
-    style C1 fill:#e8f4f8
-    style D1 fill:#e8f4f8
-    style E1 fill:#e8f4f8
 ```
 # 📌 Features
 
@@ -40,6 +36,7 @@ graph TD
 ✔ O(1) average time complexity
 ✔ Memory-safe (no leaks)
 ✔ Underflow Handling
+
 
 ```mermaid
 classDiagram
@@ -82,6 +79,13 @@ graph LR
     A[Front: 10] --> B[20] --> C[30] --> D[Rear: 40]
 
 
+```
+```mermaid
+pie title 📊 Queue Operation Distribution
+    "Enqueue" : 35
+    "Dequeue" : 30
+    "Front Access" : 20
+    "Print/Display" : 15
 ```
 ---
 
