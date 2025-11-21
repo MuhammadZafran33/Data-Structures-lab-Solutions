@@ -62,15 +62,18 @@ classDiagram
 
 # 🌀 Circular Queue Visualization
 ## Circular Memory Movement
-
 ```mermaid
 graph TD
-    A0[Index 0] --> A1[Index 1]
-    A1 --> A2[Index 2]
-    A2 --> A3[Index 3]
-    A3 --> A0
-    style A3 fill:#ffdddd
-    style A0 fill:#ddffdd
+    A[🚀 Dynamic Queue] --> B[⚡ Fast O1 Operations]
+    A --> C[🔄 Auto Resize]
+    A --> D[🌀 Circular Memory]
+    A --> E[🛡️ Memory Safe]
+    
+    style A fill:#ff6b6b,stroke:#333,stroke-width:3px,color:#fff
+    style B fill:#4ecdc4,stroke:#333,stroke-width:2px,color:#000
+    style C fill:#45b7d1,stroke:#333,stroke-width:2px,color:#000
+    style D fill:#96ceb4,stroke:#333,stroke-width:2px,color:#000
+    style E fill:#feca57,stroke:#333,stroke-width:2px,color:#000
 ```
 
 # 🧱 Queue Example (Front → Rear)
