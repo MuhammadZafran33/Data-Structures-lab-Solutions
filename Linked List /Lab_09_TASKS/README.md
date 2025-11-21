@@ -10,7 +10,28 @@ Front
 Dynamic Resizing
 Circular Indexing
 Print
-
+```mermaid
+graph TD
+    A[🎯 Dynamic Circular Queue] --> B[⚡ O(1) Operations]
+    A --> C[🔄 Automatic Resizing]
+    A --> D[🌀 Circular Indexing]
+    A --> E[🛡️ Memory Safe]
+    
+    B --> B1[Enqueue/Dequeue]
+    C --> C1[Double Capacity]
+    D --> D1[Modulo Arithmetic]
+    E --> E1[RAII Principle]
+    
+    style A fill:#ff6b6b,stroke:#333,stroke-width:3px,color:#fff
+    style B fill:#4ecdc4,stroke:#333,stroke-width:2px,color:#000
+    style C fill:#45b7d1,stroke:#333,stroke-width:2px,color:#000
+    style D fill:#96ceb4,stroke:#333,stroke-width:2px,color:#000
+    style E fill:#feca57,stroke:#333,stroke-width:2px,color:#000
+    style B1 fill:#e8f4f8
+    style C1 fill:#e8f4f8
+    style D1 fill:#e8f4f8
+    style E1 fill:#e8f4f8
+```
 # 📌 Features
 
 ✔ FIFO (First In First Out)
