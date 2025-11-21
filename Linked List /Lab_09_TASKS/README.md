@@ -46,6 +46,9 @@ classDiagram
     }
 ```
 
+# 🌀 Circular Queue Visualization
+## Circular Memory Movement
+
 ```mermaid
 graph TD
     A0[Index 0] --> A1[Index 1]
@@ -54,4 +57,30 @@ graph TD
     A3 --> A0
     style A3 fill:#ffdddd
     style A0 fill:#ddffdd
+```
+
+# 🧱 Queue Example (Front → Rear)
+```mermaid
+graph LR
+    A[Front: 10] --> B[20] --> C[30] --> D[Rear: 40]
+
+
+```
+# 🚀 Resize Operation (Capacity Doubles)
+## Before Resize (Capacity = 4)
+```mermaid
+graph LR
+    A[10] --> B[20] --> C[30] --> D[40] --> E[ ] --> F[ ] --> G[ ] --> H[ ]
+
+```
+# Queue Enqueue Flowchart
+
+```mermaid
+flowchart TD
+    A[enqueue(value)] --> B{Queue Full?}
+    B -- Yes --> C[resize()]
+    B -- No --> D[Insert at rearidx]
+    D --> E[rearidx = (rearidx + 1) % capacity]
+    E --> F[currentSize++]
+    F --> G[Done]
 ```
