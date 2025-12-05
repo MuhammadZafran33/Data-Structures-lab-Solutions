@@ -46,7 +46,7 @@ graph TB
     style RIGHT3 fill:#9C27B0,stroke:#333,stroke-width:1px,color:#fff
 ```
 
-# 2. Complete Program Flowchart
+# 📋 2. Complete Program Flowchart
 ## BST Structure Visualization
 This shows the entire program flow from start to end
 
@@ -127,7 +127,7 @@ flowchart TD
     style EXIT fill:#F44336,stroke:#333,stroke-width:1px,color:#fff
 ```
 
-# 3. Insertion Process:
+# ➕ 3. Insertion Process:
 Shows the recursive algorithm for inserting a new event
 
 ### Explanation: The insertNode function works recursively:
@@ -213,7 +213,7 @@ graph TD
 
 ```
 
-# 5. Search Algorithm Flow:
+# 🔍 5. Search Algorithm Flow:
 Shows how the program searches for a specific year
 
 ### Explanation: The searchNode function works recursively:
@@ -252,7 +252,8 @@ flowchart LR
 ```
 
 
-# 6. Complete System Architecture:
+# 🏗️6. Complete System Architecture:
+
 Shows the layered architecture of the entire system
 
 ### Explanation: The system has 3 main layers:
@@ -327,7 +328,7 @@ graph LR
 ```
 
 
-# 7. Memory Management Flow:
+# 🧹 7. Memory Management Flow:
 Shows how the program manages dynamic memory
 
 ### Explanation: Memory management follows this pattern:
@@ -381,7 +382,7 @@ flowchart TD
 ```
 
 
-# 8. Timeline Display Process:
+# 📅 8. Timeline Display Process:
 Shows how events are displayed in chronological order
 
 ### Explanation: The printInOrder function:
