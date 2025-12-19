@@ -44,3 +44,22 @@ Format: Ranked list with detailed student information.
 **Output:** department_analysis.txt
 
 **Format:** Department-wise analysis with statistics (Avg, High, Low CGPA)
+
+# 🏆 Task 4: Performance Tiers
+**Algorithm:** Bubble Sort
+
+**Sorting Criteria:** Name (Alphabetical)
+
+**Output:** performance_tiers.txt
+
+### Categories:
+
+**🥇 Elite Tier: CGPA ≥ 3.70**
+
+**🥈 High Achievers: 3.30 ≤ CGPA < 3.70**
+
+**🥉 Good Standing: 3.00 ≤ CGPA < 3.30**
+
+**📘 Satisfactory: 2.50 ≤ CGPA < 3.00**
+
+**📝 Needs Improvement: CGPA < 2.50**
