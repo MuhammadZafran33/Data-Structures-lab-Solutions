@@ -1,0 +1,134 @@
+
+--- DEPT: ARC ---
+Sem 2 | Naveed Mufti | CGPA: 3.3
+Sem 2 | Salman Rizvi | CGPA: 2.72
+Sem 3 | Yousuf Junaid | CGPA: 3.64
+Sem 4 | Hajra Ghazi | CGPA: 3.04
+Sem 4 | Amjad Khan | CGPA: 2.87
+Sem 5 | Tariq Ismail | CGPA: 2.54
+Sem 6 | Rema Usmani | CGPA: 3.53
+Sem 7 | Samina Naveed | CGPA: 3.57
+Sem 7 | Hajra Ilyas | CGPA: 3.53
+Sem 7 | Sabeen Majeed | CGPA: 3.04
+Sem 8 | Ismail Qureshi | CGPA: 3.81
+Sem 8 | Nadeem Naseer | CGPA: 3.49
+Sem 8 | Taha Waheed | CGPA: 3.48
+Dept Stats: Avg 3.27385 | High 3.81 | Low 2.54
+
+--- DEPT: BBA ---
+Sem 1 | Iram Gillani | CGPA: 3.21
+Sem 3 | Areeba Usman | CGPA: 3.77
+Sem 3 | Arslan Ghani | CGPA: 3.23
+Sem 4 | Mariam Zahid | CGPA: 3.11
+Sem 4 | Sabeen Saeed | CGPA: 3.11
+Sem 7 | Qasim Butt | CGPA: 3.97
+Sem 7 | Zain Yaqoob | CGPA: 3.87
+Sem 7 | Madiha Mughal | CGPA: 3.09
+Sem 7 | Zainab Osmani | CGPA: 3.02
+Sem 7 | Fahad Ilyas | CGPA: 2.66
+Sem 8 | Hamza Butt | CGPA: 3.65
+Dept Stats: Avg 3.33545 | High 3.97 | Low 2.66
+
+--- DEPT: CHE ---
+Sem 1 | Mehreen Hashmi | CGPA: 3.53
+Sem 1 | Faiza Imam | CGPA: 2.5
+Sem 4 | Farhan Waqar | CGPA: 3.24
+Sem 4 | Kamran Usman | CGPA: 2.58
+Sem 5 | Tooba Ghani | CGPA: 3.34
+Sem 7 | Ismail Chaudhry | CGPA: 3.07
+Sem 7 | Furqan Irfan | CGPA: 3.03
+Sem 7 | Zahra Nasir | CGPA: 2.59
+Sem 7 | Sabeen Kazmi | CGPA: 2.15
+Sem 8 | Sehar Younas | CGPA: 3.09
+Dept Stats: Avg 2.912 | High 3.53 | Low 2.15
+
+--- DEPT: CIV ---
+Sem 1 | Huda Kamal | CGPA: 3.96
+Sem 2 | Tanvir Ansari | CGPA: 2.86
+Sem 4 | Rabia Hassan | CGPA: 3.58
+Sem 4 | Nimra Zaidi | CGPA: 3.5
+Sem 4 | Sadia Waheed | CGPA: 2.79
+Sem 5 | Huma Akram | CGPA: 3.56
+Sem 5 | Aliza Mirza | CGPA: 3.41
+Sem 5 | Adnan Rahman | CGPA: 3.04
+Sem 6 | Haider Masood | CGPA: 2.19
+Sem 8 | Hafsa Tariq | CGPA: 2.81
+Dept Stats: Avg 3.17 | High 3.96 | Low 2.19
+
+--- DEPT: CSE ---
+Sem 2 | Aliza Aziz | CGPA: 3.65
+Sem 2 | Ehsan Yaqoob | CGPA: 3.54
+Sem 2 | Sana Farhan | CGPA: 3.07
+Sem 3 | Hiba Hussain | CGPA: 3.15
+Sem 6 | Yousuf Tahir | CGPA: 3.72
+Sem 7 | Huda Qureshi | CGPA: 3.23
+Sem 7 | Taha Rahman | CGPA: 2.92
+Dept Stats: Avg 3.32571 | High 3.72 | Low 2.92
+
+--- DEPT: ECO ---
+Sem 1 | Bashir Abbasi | CGPA: 2.56
+Sem 4 | Waqar Yousuf | CGPA: 3.17
+Sem 5 | Raza Naqvi | CGPA: 3.92
+Sem 6 | Azhar Dar | CGPA: 3.92
+Sem 6 | Azhar Dar | CGPA: 2.23
+Sem 8 | Asad Butt | CGPA: 3.48
+Sem 8 | Amjad Kareem | CGPA: 3.11
+Dept Stats: Avg 3.19857 | High 3.92 | Low 2.23
+
+--- DEPT: EEE ---
+Sem 2 | Yasir Zia | CGPA: 3.02
+Sem 3 | Ruqayyah Nadeem | CGPA: 3.27
+Sem 3 | Tariq Farhan | CGPA: 3.27
+Sem 3 | Ali Kamal | CGPA: 2.58
+Sem 4 | Huma Hamza | CGPA: 3.87
+Sem 4 | Naila Mirza | CGPA: 3.19
+Sem 5 | Hamza Rizvi | CGPA: 3.13
+Dept Stats: Avg 3.19 | High 3.87 | Low 2.58
+
+--- DEPT: MAT ---
+Sem 1 | Ruqayyah Zaman | CGPA: 3.2
+Sem 2 | Sidra Ahmed | CGPA: 3.97
+Sem 2 | Sumaya Niazi | CGPA: 3.49
+Sem 3 | Ali Akhtar | CGPA: 3.33
+Sem 3 | Salman Shakeel | CGPA: 3.1
+Sem 4 | Zubair Ahmed | CGPA: 3.15
+Sem 5 | Haleema Tanveer | CGPA: 2.81
+Sem 6 | Luqman Imam | CGPA: 3.73
+Sem 6 | Waqar Masood | CGPA: 3.7
+Sem 6 | Khadija Bashir | CGPA: 3.68
+Sem 6 | Saqib Iqbal | CGPA: 3.2
+Sem 7 | Mahira Fahim | CGPA: 3.69
+Sem 7 | Arslan Pirzada | CGPA: 3.03
+Sem 8 | Danish Latif | CGPA: 3.24
+Sem 8 | Danish Ismail | CGPA: 3.02
+Dept Stats: Avg 3.356 | High 3.97 | Low 2.81
+
+--- DEPT: MEC ---
+Sem 1 | Yahya Baloch | CGPA: 3.31
+Sem 1 | Danish Aziz | CGPA: 2.9
+Sem 2 | Mubarak Kazmi | CGPA: 3.6
+Sem 3 | Madiha Mirza | CGPA: 3.93
+Sem 4 | Talha Rana | CGPA: 3.08
+Sem 4 | Anum Durrani | CGPA: 2.09
+Sem 5 | Yahya Bhatti | CGPA: 3.64
+Sem 5 | Ibrahim Rizvi | CGPA: 3.43
+Sem 5 | Ibrahim Tanveer | CGPA: 2.56
+Sem 6 | Khalid Javed | CGPA: 3.88
+Sem 6 | Muhammad Niazi | CGPA: 3.83
+Sem 6 | Rafiq Rahman | CGPA: 3.49
+Sem 6 | Hiba Farooqui | CGPA: 3.4
+Sem 6 | Zara Siddiqui | CGPA: 3.2
+Sem 7 | Jamil Zaheer | CGPA: 2.27
+Dept Stats: Avg 3.24067 | High 3.93 | Low 2.09
+
+--- DEPT: PHY ---
+Sem 3 | Taha Shafiq | CGPA: 3.01
+Sem 4 | Luqman Mufti | CGPA: 3.12
+Sem 5 | Ruqayyah Haider | CGPA: 2.94
+Sem 5 | Noor Haider | CGPA: 2.82
+Sem 6 | Sami Wali | CGPA: 3.8
+Sem 6 | Mahnoor Aslam | CGPA: 3.6
+Sem 7 | Wasim Iqbal | CGPA: 2.54
+Sem 8 | Faiza Warraich | CGPA: 3.25
+Sem 8 | Ayesha Osmani | CGPA: 3.08
+Dept Stats: Avg 3.12889 | High 3.8 | Low 2.54
