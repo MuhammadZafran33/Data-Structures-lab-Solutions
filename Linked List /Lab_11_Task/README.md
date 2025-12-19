@@ -2,6 +2,38 @@
 ## 📊 Overview
 EduTrack System is a C++ based student management and analytics tool that processes academic records to generate insightful reports. The system efficiently organizes student data using linked lists and implements multiple sorting algorithms to categorize students based on various academic metrics.
 
+```mermaid
+graph TD
+    A[students_data.txt] --> B[EduTrackSystem<br/>Load Data]
+    B --> C[Linked List<br/>Student Structure]
+    
+    C --> D[Task 1<br/>Selection Sort]
+    C --> E[Task 2<br/>Bubble Sort]
+    C --> F[Task 3<br/>Selection Sort]
+    C --> G[Task 4<br/>Bubble Sort]
+    
+    D --> H[ranked_by_cgpa.txt]
+    E --> I[sorted_by_enrollment.txt]
+    F --> J[department_analysis.txt]
+    G --> K[performance_tiers.txt]
+    
+    L[Student Record] --> C
+    
+    subgraph "Student Structure"
+        M["id: int<br/>name: string<br/>dept: string<br/>semester: int<br/>cgpa: double<br/>credits: int<br/>year: int<br/>next: Student*"]
+    end
+    
+    style D fill:#e1f5fe
+    style E fill:#f3e5f5
+    style F fill:#e8f5e8
+    style G fill:#fff3e0
+    style H fill:#c8e6c9
+    style I fill:#d1c4e9
+    style J fill:#b3e5fc
+    style K fill:#ffecb3
+
+    ```
+    
 # ✨ Key Features
 #### 📈 Task 1: University Ranking
 #### Algorithm: Selection Sort
