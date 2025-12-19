@@ -1,0 +1,139 @@
+=== YEAR: 2015 ===
+200017 | Areeba Usman | CGPA: 3.77
+200035 | Waqar Masood | CGPA: 3.7
+200049 | Sami Wali | CGPA: 3.8
+200052 | Rafiq Rahman | CGPA: 3.49
+200069 | Nadeem Naseer | CGPA: 3.49
+200070 | Ehsan Yaqoob | CGPA: 3.54
+200086 | Khadija Bashir | CGPA: 3.68
+200090 | Danish Latif | CGPA: 3.24
+200096 | Azhar Dar | CGPA: 3.92
+
+Average CGPA: 3.62556
+
+=== YEAR: 2016 ===
+200001 | Tariq Ismail | CGPA: 2.54
+200006 | Madiha Mughal | CGPA: 3.09
+200007 | Ibrahim Rizvi | CGPA: 3.43
+200030 | Jamil Zaheer | CGPA: 2.27
+200039 | Qasim Butt | CGPA: 3.97
+200054 | Zainab Osmani | CGPA: 3.02
+200055 | Hafsa Tariq | CGPA: 2.81
+200057 | Ismail Chaudhry | CGPA: 3.07
+200060 | Mariam Zahid | CGPA: 3.11
+200066 | Farhan Waqar | CGPA: 3.24
+200072 | Amjad Kareem | CGPA: 3.11
+200080 | Mahnoor Aslam | CGPA: 3.6
+200083 | Muhammad Niazi | CGPA: 3.83
+200084 | Raza Naqvi | CGPA: 3.92
+200087 | Yasir Zia | CGPA: 3.02
+200089 | Zara Siddiqui | CGPA: 3.2
+200095 | Luqman Mufti | CGPA: 3.12
+
+Average CGPA: 3.19706
+
+=== YEAR: 2017 ===
+200012 | Samina Naveed | CGPA: 3.57
+200018 | Yousuf Tahir | CGPA: 3.72
+200021 | Rabia Hassan | CGPA: 3.58
+200029 | Taha Shafiq | CGPA: 3.01
+200031 | Hiba Hussain | CGPA: 3.15
+200036 | Azhar Dar | CGPA: 2.23
+200037 | Tooba Ghani | CGPA: 3.34
+200038 | Mahira Fahim | CGPA: 3.69
+200063 | Naveed Mufti | CGPA: 3.3
+200092 | Sumaya Niazi | CGPA: 3.49
+200093 | Anum Durrani | CGPA: 2.09
+200099 | Rema Usmani | CGPA: 3.53
+200104 | Huma Hamza | CGPA: 3.87
+
+Average CGPA: 3.27462
+
+=== YEAR: 2018 ===
+200002 | Kamran Usman | CGPA: 2.58
+200011 | Danish Ismail | CGPA: 3.02
+200015 | Sadia Waheed | CGPA: 2.79
+200020 | Hajra Ghazi | CGPA: 3.04
+200022 | Saqib Iqbal | CGPA: 3.2
+200024 | Danish Aziz | CGPA: 2.9
+200032 | Yahya Baloch | CGPA: 3.31
+200033 | Haider Masood | CGPA: 2.19
+200042 | Ali Kamal | CGPA: 2.58
+200046 | Zahra Nasir | CGPA: 2.59
+200047 | Sana Farhan | CGPA: 3.07
+200051 | Naila Mirza | CGPA: 3.19
+200079 | Ruqayyah Haider | CGPA: 2.94
+200102 | Zain Yaqoob | CGPA: 3.87
+
+Average CGPA: 2.94786
+
+=== YEAR: 2019 ===
+200004 | Talha Rana | CGPA: 3.08
+200013 | Adnan Rahman | CGPA: 3.04
+200014 | Arslan Ghani | CGPA: 3.23
+200016 | Yousuf Junaid | CGPA: 3.64
+200019 | Asad Butt | CGPA: 3.48
+200027 | Amjad Khan | CGPA: 2.87
+200028 | Aliza Mirza | CGPA: 3.41
+200040 | Aliza Aziz | CGPA: 3.65
+200043 | Haleema Tanveer | CGPA: 2.81
+200059 | Furqan Irfan | CGPA: 3.03
+200064 | Yahya Bhatti | CGPA: 3.64
+200075 | Sehar Younas | CGPA: 3.09
+200091 | Mubarak Kazmi | CGPA: 3.6
+200100 | Luqman Imam | CGPA: 3.73
+200101 | Hamza Butt | CGPA: 3.65
+
+Average CGPA: 3.33
+
+=== YEAR: 2020 ===
+200003 | Hajra Ilyas | CGPA: 3.53
+200010 | Fahad Ilyas | CGPA: 2.66
+200056 | Ruqayyah Nadeem | CGPA: 3.27
+200058 | Sidra Ahmed | CGPA: 3.97
+200062 | Arslan Pirzada | CGPA: 3.03
+200065 | Salman Shakeel | CGPA: 3.1
+200071 | Nimra Zaidi | CGPA: 3.5
+200074 | Taha Rahman | CGPA: 2.92
+200077 | Ibrahim Tanveer | CGPA: 2.56
+200085 | Sabeen Saeed | CGPA: 3.11
+200094 | Faiza Warraich | CGPA: 3.25
+
+Average CGPA: 3.17273
+
+=== YEAR: 2021 ===
+200023 | Khalid Javed | CGPA: 3.88
+200048 | Taha Waheed | CGPA: 3.48
+200053 | Madiha Mirza | CGPA: 3.93
+200082 | Zubair Ahmed | CGPA: 3.15
+
+Average CGPA: 3.61
+
+=== YEAR: 2022 ===
+200025 | Bashir Abbasi | CGPA: 2.56
+200034 | Tanvir Ansari | CGPA: 2.86
+200044 | Salman Rizvi | CGPA: 2.72
+200045 | Mehreen Hashmi | CGPA: 3.53
+200050 | Noor Haider | CGPA: 2.82
+200061 | Faiza Imam | CGPA: 2.5
+200067 | Iram Gillani | CGPA: 3.21
+200078 | Hiba Farooqui | CGPA: 3.4
+200098 | Ali Akhtar | CGPA: 3.33
+200103 | Hamza Rizvi | CGPA: 3.13
+
+Average CGPA: 3.006
+
+=== YEAR: 2023 ===
+200005 | Wasim Iqbal | CGPA: 2.54
+200008 | Tariq Farhan | CGPA: 3.27
+200009 | Waqar Yousuf | CGPA: 3.17
+200026 | Sabeen Kazmi | CGPA: 2.15
+200041 | Sabeen Majeed | CGPA: 3.04
+200068 | Huda Kamal | CGPA: 3.96
+200073 | Ruqayyah Zaman | CGPA: 3.2
+200076 | Ismail Qureshi | CGPA: 3.81
+200081 | Ayesha Osmani | CGPA: 3.08
+200088 | Huda Qureshi | CGPA: 3.23
+200097 | Huma Akram | CGPA: 3.56
+
+Average CGPA: 3.18273
