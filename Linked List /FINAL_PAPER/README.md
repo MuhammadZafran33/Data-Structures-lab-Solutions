@@ -2,7 +2,7 @@
 
 > **A Pointer-Based Binary Search Tree Implementation for Epic Player Matchmaking**
 
-*Built by Gemini | Your Partner for GPA Success*
+*Built by Muhammad Zafran | Your Partner for Academic Success*
 
 ---
 
