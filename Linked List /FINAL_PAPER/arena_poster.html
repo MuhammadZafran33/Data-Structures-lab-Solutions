@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arena of Ratings - Poster</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .poster {
+            width: 100%;
+            max-width: 900px;
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            border-radius: 20px;
+            padding: 60px 40px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+            color: #fff;
+            border: 3px solid #667eea;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .poster::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(102, 126, 234, 0.1) 0%, transparent 70%);
+            animation: pulse 4s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+        }
+        
+        .content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .title {
+            font-size: 4em;
+            font-weight: bold;
+            background: linear-gradient(135deg, #667eea, #764ba2, #f093fb);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(102, 126, 234, 0.3);
+            animation: slideDown 0.8s ease;
+        }
+        
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .subtitle {
+            font-size: 1.5em;
+            color: #a8b3ff;
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+        
+        .divider {
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #667eea, transparent);
+            margin: 30px 0;
+            border-radius: 2px;
+        }
+        
+        .problem-section {
+            margin: 40px 0;
+            animation: fadeIn 0.8s ease 0.3s both;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .section-title {
+            font-size: 1.8em;
+            color: #667eea;
+            margin-bottom: 20px;
+            font-weight: bold;
+            border-left: 4px solid #764ba2;
+            padding-left: 15px;
+        }
+        
+        .section-content {
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #d4d4d4;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        
+        .stats-box {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .stat-item {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.2), rgba(118, 75, 162, 0.2));
+            padding: 25px;
+            border-radius: 10px;
+            border: 2px solid #667eea;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .stat-item:hover {
+            transform: translateY(-5px);
+            border-color: #f093fb;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+        }
+        
+        .stat-number {
+            font-size: 2.5em;
+            color: #667eea;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .stat-label {
+            color: #a8b3ff;
+            font-size: 0.95em;
+        }
+        
+        .commands-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .command-card {
+            background: rgba(102, 126, 234, 0.1);
+            border: 1px solid #667eea;
+            padding: 15px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .command-card:hover {
+            background: rgba(102, 126, 234, 0.2);
+            border-color: #f093fb;
+            transform: translateX(5px);
+        }
+        
+        .command-name {
+            color: #667eea;
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-bottom: 5px;
+        }
+        
+        .command-desc {
+            color: #b0b0b0;
+            font-size: 0.9em;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid rgba(102, 126, 234, 0.3);
+            color: #a8b3ff;
+        }
+        
+        .footer-text {
+            font-size: 1.2em;
+            margin-bottom: 15px;
+        }
+        
+        .badges {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        
+        .badge {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 0.95em;
+        }
+        
+        @media (max-width: 768px) {
+            .poster {
+                padding: 40px 25px;
+            }
+            
+            .title {
+                font-size: 2.5em;
+            }
+            
+            .subtitle {
+                font-size: 1.2em;
+            }
+            
+            .section-title {
+                font-size: 1.4em;
+            }
+            
+            .section-content {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="poster">
+        <div class="content">
+            <div class="header">
+                <div class="title">⚔️ ARENA OF RATINGS ⚔️</div>
+                <div class="subtitle">Real-Time Matchmaking Engine Challenge</div>
+            </div>
+            
+            <div class="divider"></div>
+            
+            <div class="problem-section">
+                <div class="section-title">🎯 THE CHALLENGE</div>
+                <div class="section-content">
+                    Build a competitive game matchmaking and leaderboard system that supports real-time player queries. Design a self-balancing data structure to efficiently handle insertions, deletions, and complex searches across thousands of players.
+                </div>
+            </div>
+            
+            <div class="problem-section">
+                <div class="section-title">📊 KEY STATISTICS</div>
+                <div class="stats-box">
+                    <div class="stat-item">
+                        <div class="stat-number">13</div>
+                        <div class="stat-label">Operations</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">200K</div>
+                        <div class="stat-label">Max Commands</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">O(log n)</div>
+                        <div class="stat-label">Avg Time</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">30</div>
+                        <div class="stat-label">Marks</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="problem-section">
+                <div class="section-title">⚙️ CORE OPERATIONS</div>
+                <div class="commands-grid">
+                    <div class="command-card">
+                        <div class="command-name">🔗 JOIN / LEAVE</div>
+                        <div class="command-desc">Add or remove players from arena</div>
+                    </div>
+                    <div class="command-card">
+                        <div class="command-name">❤️ DAMAGE / HEAL</div>
+                        <div class="command-desc">Update player health points</div>
+                    </div>
+                    <div class="command-card">
+                        <div class="command-name">🎮 MATCH</div>
+                        <div class="command-desc">Find closest rated opponent</div>
+                    </div>
+                    <div class="command-card">
+                        <div class="command-name">📈 NEXT / PREV</div>
+                        <div class="command-desc">Navigate rating ladder</div>
+                    </div>
+                    <div class="command-card">
+                        <div class="command-name">🔍 RANGE</div>
+                        <div class="command-desc">Query players in rating interval</div>
+                    </div>
+                    <div class="command-card">
+                        <div class="command-name">🏆 RANK / KTH</div>
+                        <div class="command-desc">Leaderboard position queries</div>
+                    </div>
+                    <div class="command-card">
+                        <div class="command-name">⚡ DUEL</div>
+                        <div class="command-desc">Calculate distance between players</div>
+                    </div>
+                    <div class="command-card">
+                        <div class="command-name">📊 STATS</div>
+                        <div class="command-desc">Tree structure diagnostics</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="problem-section">
+                <div class="section-title">🔧 TECHNICAL REQUIREMENTS</div>
+                <div class="section-content">
+                    ✓ Implement custom pointer-based AVL Tree<br>
+                    ✓ No STL ordered containers (map, set, multimap)<br>
+                    ✓ Handle all tree deletion cases (0/1/2 children)<br>
+                    ✓ Support 200,000+ operations efficiently<br>
+                    ✓ Exact output formatting (case-sensitive)<br>
+                    ✓ Fast I/O with ios optimization
+                </div>
+            </div>
+            
+            <div class="divider"></div>
+            
+            <div class="footer">
+                <div class="footer-text">🏅 Data Structures Lab - Final Exam Programming Challenge</div>
+                <div class="badges">
+                    <div class="badge">C++</div>
+                    <div class="badge">AVL Tree</div>
+                    <div class="badge">Algorithms</div>
+                    <div class="badge">30 Marks</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
