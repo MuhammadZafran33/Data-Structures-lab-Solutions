@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arena of Ratings - Interactive Poster</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', 'Segoe UI', sans-serif;
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        /* ========== HEADER ========== */
+        .poster {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(240, 245, 255, 0.95) 100%);
+            border-radius: 30px;
+            padding: 80px 50px;
+            box-shadow: 0 30px 100px rgba(0, 0, 0, 0.3);
+            margin-bottom: 30px;
+            backdrop-filter: blur(10px);
+            border: 3px solid rgba(102, 126, 234, 0.3);
+            animation: slideInDown 0.8s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        @keyframes slideInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .poster::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(102, 126, 234, 0.1) 0%, transparent 70%);
+            animation: pulse 4s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+        
+        .header-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .title {
+            font-size: 4.5em;
+            font-weight: 900;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 15px;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(102, 126, 234, 0.2);
+            animation: titlePulse 2s ease-in-out infinite;
+        }
+        
+        @keyframes titlePulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        .subtitle {
+            font-size: 1.8em;
+            color: #667eea;
+            margin-bottom: 30px;
+            font-weight: 600;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 0.8s ease 0.2s both;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* ========== COURSE INFO ========== */
+        .course-info {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+            padding: 30px;
+            border-radius: 20px;
+            margin-bottom: 40px;
+            border: 2px solid rgba(102, 126, 234, 0.3);
+            backdrop-filter: blur(10px);
+            animation: fadeInUp 0.8s ease 0.4s both;
+            transition: all 0.3s ease;
+        }
+        
+        .course-info:hover {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.2) 0%, rgba(118, 75, 162, 0.2) 100%);
+            border-color: rgba(102, 126, 234, 0.6);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+        }
+        
+        .course-info h3 {
+            font-size: 1.5em;
+            color: #667eea;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .info-item {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            border-left: 5px solid #667eea;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .info-item:hover {
+            transform: translateX(10px);
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.2);
+            border-left-color: #f093fb;
+        }
+        
+        .info-label {
+            color: #999;
+            font-size: 0.9em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        
+        .info-value {
+            color: #333;
+            font-size: 1.15em;
+            font-weight: 700;
+            color: #667eea;
+        }
+        
+        /* ========== DIVIDER ========== */
+        .divider {
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #667eea, transparent);
+            margin: 40px 0;
+            border-radius: 2px;
+        }
+        
+        /* ========== STATS ========== */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+        
+        .stat-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 30px;
+            border-radius: 20px;
+            color: white;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+            animation: fadeInUp 0.8s ease both;
+        }
+        
+        .stat-card:nth-child(1) { animation-delay: 0.5s; }
+        .stat-card:nth-child(2) { animation-delay: 0.6s; }
+        .stat-card:nth-child(3) { animation-delay: 0.7s; }
+        .stat-card:nth-child(4) { animation-delay: 0.8s; }
+        
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+            animation: shimmer 3s infinite;
+        }
+        
+        @keyframes shimmer {
+            0% { transform: translate(-50%, -50%); }
+            100% { transform: translate(150%, 150%); }
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-15px) scale(1.05);
+            box-shadow: 0 20px 50px rgba(102, 126, 234, 0.5);
+        }
+        
+        .stat-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .stat-number {
+            font-size: 3.5em;
+            font-weight: 900;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        
+        .stat-label {
+            font-size: 1.1em;
+            opacity: 0.95;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+        
+        /* ========== CONTENT SECTIONS ========== */
+        .content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 50px 0;
+        }
+        
+        .section {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+            border-top: 5px solid;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            animation: fadeInUp 0.8s ease both;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .section:nth-child(1) { border-top-color: #667eea; animation-delay: 0.9s; }
+        .section:nth-child(2) { border-top-color: #764ba2; animation-delay: 1s; }
+        .section:nth-child(3) { border-top-color: #f093fb; animation-delay: 1.1s; }
+        .section:nth-child(4) { border-top-color: #23d5ab; animation-delay: 1.2s; }
+        
+        .section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .section:hover::before {
+            left: 100%;
+        }
+        
+        .section:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 25px 70px rgba(0, 0, 0, 0.15);
+        }
+        
+        .section-icon {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+        }
+        
+        .section-title {
+            font-size: 1.8em;
+            color: #667eea;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .section-content {
+            color: #666;
+            font-size: 1em;
+            line-height: 1.8;
+        }
+        
+        .section-content ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .section-content li {
+            padding: 12px 0;
+            padding-left: 30px;
+            position: relative;
+            border-bottom: 1px solid #f0f0f0;
+            transition: all 0.3s ease;
+        }
+        
+        .section-content li:hover {
+            padding-left: 40px;
+            color: #667eea;
+        }
+        
+        .section-content li:before {
+            content: "▶";
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+            font-size: 0.8em;
+        }
+        
+        .section-content li:last-child {
+            border-bottom: none;
+        }
+        
+        /* ========== BUTTONS ========== */
+        .buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 50px 0;
+        }
+        
+        .btn {
+            padding: 18px 40px;
+            font-size: 1.1em;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            animation: fadeInUp 0.8s ease 1.3s both;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px rgba(102, 126, 234, 0.4);
+        }
+        
+        .btn-secondary {
+            background: white;
+            color: #667eea;
+            border: 3px solid #667eea;
+        }
+        
+        .btn-secondary:hover {
+            background: #667eea;
+            color: white;
+            transform: translateY(-5px);
+        }
+        
+        /* ========== FOOTER ========== */
+        .footer {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 50px;
+            border-radius: 30px;
+            text-align: center;
+            color: white;
+            margin-top: 50px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+            animation: fadeInUp 0.8s ease 1.4s both;
+        }
+        
+        .footer-title {
+            font-size: 2.2em;
+            margin-bottom: 20px;
+            font-weight: 900;
+            letter-spacing: 1px;
+        }
+        
+        .footer-info {
+            font-size: 1.1em;
+            line-height: 2;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+        
+        .footer-tags {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+        
+        .tag {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 12px 25px;
+            border-radius: 25px;
+            border: 2px solid rgba(255, 255, 255, 0.4);
+            font-size: 0.95em;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .tag:hover {
+            background: rgba(255, 255, 255, 0.3);
+            border-color: white;
+            transform: scale(1.1);
+        }
+        
+        /* ========== MODALS ========== */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(5px);
+            animation: fadeIn 0.3s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .modal-content {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin: 5% auto;
+            padding: 50px;
+            border-radius: 25px;
+            width: 90%;
+            max-width: 700px;
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
+            animation: slideInDown 0.3s ease;
+            color: white;
+            position: relative;
+        }
+        
+        .modal-title {
+            font-size: 2.2em;
+            margin-bottom: 25px;
+            color: white;
+            font-weight: 900;
+            letter-spacing: 1px;
+        }
+        
+        .modal-text {
+            font-size: 1.05em;
+            line-height: 1.9;
+            color: rgba(255, 255, 255, 0.95);
+            margin-bottom: 20px;
+        }
+        
+        .modal-text strong {
+            color: #fff;
+            font-weight: 700;
+        }
+        
+        .close {
+            color: white;
+            position: absolute;
+            right: 25px;
+            top: 20px;
+            font-size: 2.5em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .close:hover {
+            color: #ffeb3b;
+            transform: rotate(90deg);
+        }
+        
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 768px) {
+            .poster {
+                padding: 40px 25px;
+            }
+            
+            .title {
+                font-size: 2.5em;
+            }
+            
+            .subtitle {
+                font-size: 1.3em;
+            }
+            
+            .stat-number {
+                font-size: 2.5em;
+            }
+            
+            .section-title {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="poster">
+            <div class="header-content">
+                <div class="title">⚔️ ARENA OF RATINGS ⚔️</div>
+                <div class="subtitle">Real-Time Matchmaking Engine</div>
+            </div>
+            
+            <div class="course-info">
+                <h3>📚 Course Information</h3>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <div class="info-label">👤 Student Name</div>
+                        <div class="info-value">Muhammad Zafran</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">📖 Course</div>
+                        <div class="info-value">DSA Lab</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">👨‍🏫 Instructor</div>
+                        <div class="info-value">Sir Shayan</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">🎯 Assessment</div>
+                        <div class="info-value">Final Exam</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="divider"></div>
+            
+            <div class="stats">
+                <div class="stat-card" onclick="showModal('stat1')">
+                    <div class="stat-content">
+                        <div class="stat-number">13</div>
+                        <div class="stat-label">Operations</div>
+                    </div>
+                </div>
+                <div class="stat-card" onclick="showModal('stat2')">
+                    <div class="stat-content">
+                        <div class="stat-number">200K</div>
+                        <div class="stat-label">Max Commands</div>
+                    </div>
+                </div>
+                <div class="stat-card" onclick="showModal('stat3')">
+                    <div class="stat-content">
+                        <div class="stat-number">O(log n)</div>
+                        <div class="stat-label">Complexity</div>
+                    </div>
+                </div>
+                <div class="stat-card" onclick="showModal('stat4')">
+                    <div class="stat-content">
+                        <div class="stat-number">15</div>
+                        <div class="stat-label">Total Marks</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="divider"></div>
+            
+            <div class="content">
+                <div class="section" onclick="showModal('problem')">
+                    <div class="section-icon">🎯</div>
+                    <div class="section-title">The Problem</div>
+                    <div class="section-content">
+                        <p>Build a competitive game matchmaking system that efficiently manages player ratings and provides real-time leaderboard queries...</p>
+                        <p style="margin-top: 10px; color: #999; font-size: 0.9em;">Click to learn more →</p>
+                    </div>
+                </div>
+                
+                <div class="section" onclick="showModal('solution')">
+                    <div class="section-icon">💡</div>
+                    <div class="section-title">The Solution</div>
+                    <div class="section-content">
+                        <p>Self-balancing AVL Tree with pointer-based implementation providing O(log n) operations for all queries...</p>
+                        <p style="margin-top: 10px; color: #999; font-size: 0.9em;">Click to learn more →</p>
+                    </div>
+                </div>
+                
+                <div class="section" onclick="showModal('features')">
+                    <div class="section-icon">⚙️</div>
+                    <div class="section-title">Core Features</div>
+                    <div class="section-content">
+                        <ul>
+                            <li>Player Join/Leave Management</li>
+                            <li>Health Point Tracking</li>
+                            <li>Intelligent Opponent Matching</li>
+                            <li>Leaderboard Queries</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="section" onclick="showModal('tech')">
+                    <div class="section-icon">🔧</div>
+                    <div class="section-title">Technical Stack</div>
+                    <div class="section-content">
+                        <ul>
+                            <li>Language: C++11/14</li>
+                            <li>Data Structure: AVL Tree</li>
+                            <li>Build: MinGW GCC</li>
+                            <li>I/O: Fast I/O Optimized</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="buttons">
+                <button class="btn btn-primary" onclick="showModal('commands')">📋 View All Commands</button>
+                <button class="btn btn-secondary" onclick="showModal('example')">📝 See Example</button>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <div class="footer-title">🏆 Project Excellence</div>
+            <div class="footer-info">
+                <strong>Built by:</strong> Muhammad Zafran<br>
+                <strong>Guided by:</strong> Sir Shayan<br>
+                <strong>Course:</strong> DSA Lab (Data Structures & Algorithms)<br>
+                <strong>Status:</strong> ✅ Complete & Functional
+            </div>
+            <div class="footer-tags">
+                <div class="tag">💻 C++</div>
+                <div class="tag">🌳 AVL Tree</div>
+                <div class="tag">🚀 Algorithms</div>
+                <div class="tag">🎯 30 Marks</div>
+                <div class="tag">⭐ Final Exam</div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- MODALS -->
+    <div id="stat1" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('stat1')">&times;</span>
+            <div class="modal-title">📊 13 Operations</div>
+            <div class="modal-text">
+                <strong>1. JOIN</strong> - Add player to arena<br>
+                <strong>2. LEAVE</strong> - Remove player<br>
+                <strong>3. STATUS</strong> - Get player info<br>
+                <strong>4. DAMAGE</strong> - Decrease HP<br>
+                <strong>5. HEAL</strong> - Increase HP<br>
+                <strong>6. MATCH</strong> - Find closest opponent<br>
+                <strong>7. NEXT</strong> - Next higher rated<br>
+                <strong>8. PREV</strong> - Previous lower rated<br>
+                <strong>9. RANGE</strong> - Query rating interval<br>
+                <strong>10. RANK</strong> - Count lower-ranked<br>
+                <strong>11. KTH</strong> - Get k-th player<br>
+                <strong>12. DUEL</strong> - Distance calculation<br>
+                <strong>13. STATS</strong> - Tree diagnostics
+            </div>
+        </div>
+    </div>
+    
+    <div id="stat2" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('stat2')">&times;</span>
+            <div class="modal-title">📈 Scalability</div>
+            <div class="modal-text">
+                Handles up to <strong>200,000 commands</strong> efficiently. With AVL Tree balancing, even large datasets maintain optimal performance. Each operation completes in milliseconds even with maximum load!
+            </div>
+        </div>
+    </div>
+    
+    <div id="stat3" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('stat3')">&times;</span>
+            <div class="modal-title">⚡ Time Complexity</div>
+            <div class="modal-text">
+                <strong>Average Case:</strong> O(log n) for most operations<br>
+                <strong>Worst Case:</strong> O(n) for range and stats<br><br>
+                The self-balancing nature ensures logarithmic height, making it ideal for competitive systems!
+            </div>
+        </div>
+    </div>
+    
+    <div id="stat4" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('stat4')">&times;</span>
+            <div class="modal-title">🏅 Mark Distribution</div>
+            <div class="modal-text">
+                <strong>Total Marks: 15</strong><br><br>
+                <strong>Breakdown:</strong><br>
+                • Code Structure & Implementation: 4 marks<br>
+                • JOIN, LEAVE, STATUS Operations: 3 marks<br>
+                • DAMAGE, HEAL Updates: 2 marks<br>
+                • MATCH Opponent Finding: 2 marks<br>
+                • RANGE, RANK, KTH Queries: 2 marks<br>
+                • STATS Tree Diagnostics: 1 mark<br>
+                • Output Formatting & Edge Cases: 1 mark<br><br>
+                
+                <strong style="color: #ffeb3b;">✨ Total: 15 Marks ✨</strong>
+            </div>
+        </div>
+    </div>
+    
+    <div id="problem" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('problem')">&times;</span>
+            <div class="modal-title">🎯 The Problem</div>
+            <div class="modal-text">
+                Build the matchmaking and leaderboard engine for "Arena of Ratings", a competitive game where each player has a unique rating. The system must quickly answer queries such as:<br><br>
+                ✓ Find player by rating<br>
+                ✓ List players in rating interval<br>
+                ✓ Find nearest opponent<br>
+                ✓ Find next higher/previous lower player<br>
+                ✓ Compute rank and k-th player<br>
+                ✓ Calculate distance in tree structure<br><br>
+                Ordering is based exclusively on player rating!
+            </div>
+        </div>
+    </div>
+    
+    <div id="solution" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('solution')">&times;</span>
+            <div class="modal-title">💡 The Solution</div>
+            <div class="modal-text">
+                <strong>Data Structure:</strong> Custom AVL Tree<br><br>
+                AVL (Adelson-Velsky and Landis) Tree is a self-balancing binary search tree that maintains height balance through rotations. Key features:<br><br>
+                ✓ O(log n) insertion, deletion, search<br>
+                ✓ Automatic rebalancing via rotations<br>
+                ✓ Perfect for range queries<br>
+                ✓ Supports successor/predecessor queries<br><br>
+                <strong>Implementation:</strong> Pointer-based with height and subtree size tracking!
+            </div>
+        </div>
+    </div>
+    
+    <div id="features" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('features')">&times;</span>
+            <div class="modal-title">⚙️ Core Features</div>
+            <div class="modal-text">
+                <strong>Player Management:</strong> Join/Leave with duplicate detection<br>
+                <strong>Health System:</strong> Damage HP & Heal HP<br>
+                <strong>Matchmaking:</strong> Find closest rated opponent<br>
+                <strong>Leaderboard:</strong> Range queries, Rank, K-th player<br>
+                <strong>Tree Analysis:</strong> Height, Leaves, Min/Max rating
+            </div>
+        </div>
+    </div>
+    
+    <div id="tech" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('tech')">&times;</span>
+            <div class="modal-title">🔧 Technical Details</div>
+            <div class="modal-text">
+                <strong>Language:</strong> C++11/14<br>
+                <strong>Data Structure:</strong> AVL Tree (Custom)<br>
+                <strong>Compiler:</strong> MinGW GCC<br>
+                <strong>I/O:</strong> Fast I/O Enabled<br><br>
+                Compilation: g++ -O2 -std=c++11 FinalExamDSA.cpp -o FinalExamDSA.exe
+            </div>
+        </div>
+    </div>
+    
+    <div id="commands" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('commands')">&times;</span>
+            <div class="modal-title">📋 All Commands</div>
+            <div class="modal-text">
+                <strong>JOIN rating name hp</strong> - Add player<br>
+                <strong>LEAVE rating</strong> - Remove player<br>
+                <strong>STATUS rating</strong> - Get player info<br>
+                <strong>DAMAGE rating amount</strong> - Decrease HP<br>
+                <strong>HEAL rating amount</strong> - Increase HP<br>
+                <strong>MATCH X</strong> - Find opponent<br>
+                <strong>NEXT X</strong> - Find next higher<br>
+                <strong>PREV X</strong> - Find previous lower<br>
+                <strong>RANGE L R</strong> - List in range<br>
+                <strong>RANK X</strong> - Count lower<br>
+                <strong>KTH k</strong> - Get k-th player<br>
+                <strong>DUEL A B</strong> - Distance<br>
+                <strong>STATS</strong> - Tree stats
+            </div>
+        </div>
+    </div>
+    
+    <div id="example" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('example')">&times;</span>
+            <div class="modal-title">📝 Example</div>
+            <div class="modal-text">
+                <strong>Input:</strong><br>
+                5<br>
+                JOIN 50 Ares 120<br>
+                JOIN 20 Luna 100<br>
+                MATCH 25<br>
+                NEXT 30<br>
+                STATS<br><br>
+                <strong>Output:</strong><br>
+                JOINED<br>
+                JOINED<br>
+                20 Luna 100<br>
+                NONE<br>
+                PLAYERS 2<br>
+                MIN 20 | MAX 50 | HEIGHT 1 | LEAVES 2
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function showModal(modalId) {
+            document.getElementById(modalId).style.display = "block";
+        }
+        
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+        
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
